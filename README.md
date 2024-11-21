@@ -81,6 +81,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+    <img src="readme-images/Breakdownschets1.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -98,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -112,7 +113,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
+  Feedbac:
   - punt 1
   - punt 2
   - nog een punt
