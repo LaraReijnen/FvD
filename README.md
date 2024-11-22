@@ -16,15 +16,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Lara Reijnen (vervangen door jouw naam)
+  Lara Reijnen
 
   #### Je startniveau:
   hier je startniveau (rood)
 
 
   #### Je focus:
-  hier je focus (surface plane)
- 
+  surface plane
 </details>
 
 
@@ -66,6 +65,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Toen ik het gebruikte bleef hij de slogan van de etos zeggen en vertelde hij niet de tekst op de pagina, dat gebeurde 
   bij mij tenminsten, misschien dat hij het normaal wel doet.
   voor de rest is de site wel mooi opgebauwt met code. ze gebruiken heel veel divs.
+
+  ### bevindingen met coderen
+  - navigatie
+  ik ben begonnen met de navigatie en na een werkgroep toen we de hamburger menu oefening moesten doen kwam ik er achter dat ik de navigatie helemaal anders moest opstellen.
+
+  - slideshow
+  door de oefeing in de werkgroep wat de slide show maken niet al te moeilijk.
+
+  - hamburger menu
+  mijn hamburger menu is werkend door javascrip alleen vind ik het vormgeven lastig met css.
+
+  ### wat ik deze week heb geleerd
+  ik heb deze week geleerd over de flexbox, grid en javasript. door de oefeingen te doen in de werkgroep ben ik er wel een stuk beter in geworden en vind ik het ook makkelijker om toe te passen in mijn site.
+
+
+
+
 
 </details>
 
@@ -136,9 +152,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   sorteren alt tekst: drop down menu: sorteer drop down menu.
 
+  ### Wat neem ik mee
   
-  - punt 4
-
+  -
 </details>
 
 
