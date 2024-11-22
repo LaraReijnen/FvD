@@ -153,8 +153,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   sorteren alt tekst: drop down menu: sorteer drop down menu.
 
   ### Wat neem ik mee
-  
-  -
+  Na afloop van het feedback gesprek neem ik de volgende verbeterpunten en inzichten mee om de toegankelijkheid en structuur van de website te optimaliseren:
+
+  - Toegankelijkheid:
+    Meer informatie toevoegen aan de README over de screenreader-functionaliteiten van Etos. Wat doen ze wel en niet op het gebied van toegankelijkheid? Dit biedt inzicht in waar verbeteringen mogelijk zijn.
+    
+  - Structuur en opbouw:
+    Filterfunctie: Implementeren als een button met een input van het type select voor een dropdown.
+    Secties en lijsten:
+        De hele pagina opdelen in een sectie. Gebruik een ul met li-elementen om inhoud te structureren.
+        De productsectie wordt een section waarin producten worden gepresenteerd als een lijst (ul) met individuele items (li).
+    Footer: H3-titels in de footer maken als openklapbare elementen. Bij het openen worden linkjes zichtbaar, gerealiseerd met HTML-elementen details en summary.
+    
+  - Code verbeteringen:
+      Hoofdtitel: Aanpassen naar Nederlands.
+      Navigatie:
+          Vermijd lijst-elementen bij de plaatjes.
+          Gebruik een nav-structuur met li-elementen, maar zonder een H1 erin.
+      Zoekbalk: Alleen als een section implementeren.
+      Alt-tekst: Zorg ervoor dat de alt-tekst voor de dropdown-menu's duidelijk aangeeft wat het is, bijvoorbeeld: "Sorteer dropdown menu."
+Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke website met een logische structuur en duidelijke navigatie.
+
 </details>
 
 
