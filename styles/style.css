@@ -71,6 +71,10 @@ header li {
 /* uitklap navigatie*/
 nav { 
 	display: flex; 
+	overflow-x: auto;
+	gap: 1rem;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 	flex-direction: column; 
 	background-color: white; 
 	position: fixed; 
@@ -289,7 +293,7 @@ h1 {
 
 .product-soort {
     display: grid;
-    grid-template-rows: auto auto auto 1fr auto auto;
+    grid-template-rows: 1fr max-content;
     gap: 0.5em;
     background-color: #f2f2f2;
     border-radius: 10px;
