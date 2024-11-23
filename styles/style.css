@@ -251,92 +251,60 @@ h1 {
 }
 
 /* Producten in grid*/
-.product-soort {
-    width: 300px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 16px;
-    display: grid;
-    grid-template-areas:
-        "favorite brand-logo"
-        "product-image product-image"
-        "product-info product-info"
-        "price product-name"
-        "rating review-count"
-        "add-to-cart add-to-cart";
-    grid-template-columns: auto 1fr;
-    gap: 8px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .product-soort img{
-	width: 10em;
+	width: 5em;
 }
 
-/* Favoriet icoon */
-.product-soort li:nth-of-type(1) {
-    grid-area: favorite;
-    justify-self: start;
+.product-soort {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:10em max-content;
 }
-
-/* Merk logo */
-.product-soort li:nth-of-type(3) {
-    grid-area: brand-logo;
-    justify-self: end;
-}
-
 /* Product afbeelding */
 .product-soort li:nth-of-type(2) {
-    grid-area: product-image;
-    justify-self: center;
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+
+/*logo derma*/
+.product-soort li:nth-of-type(3) {
+	grid-column-start: 3;
+	grid-row-start: 1;
 }
 
 /* Productinformatie (100 ML zalf) */
 .product-soort li:nth-of-type(4) {
-    grid-area: product-info;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
+	grid-column-start: 1;
+	grid-row-start: 3;
 }
 
 /* Prijs */
 .product-soort li:nth-of-type(5) {
-    grid-area: price;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+	grid-column-start: 3;
+	grid-row-start: 3;
 }
 
-/* Productnaam */
+/*product naam*/
 .product-soort li:nth-of-type(6) {
-    grid-area: product-name;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
+	grid-column-start: 1;
+	grid-row-start: 4;
 }
 
-/* Sterrenrating */
+/* aantal sterren*/
 .product-soort li:nth-of-type(7) {
-    grid-area: rating;
-    justify-self: start;
+	grid-column-start: 1;
+	grid-row-start: 5;
 }
 
-/* Review aantal */
+/* hoeveel reviews*/
 .product-soort li:nth-of-type(8) {
-    grid-area: review-count;
-    justify-self: end;
-    font-size: 14px;
-    color: #666;
+	grid-column-start: 2;
+	grid-row-start: 5;
 }
 
-/* Voeg toe knop */
+/*voeg toe knop*/
 .product-soort li:nth-of-type(9) {
-    grid-area: add-to-cart;
-    justify-self: center;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 6;
 }
-
-
