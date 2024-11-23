@@ -64,6 +64,10 @@ header li {
     height: 24px;
 }
 
+/*--------------------------------------------------*/
+/* uitklap navigatie*/
+/*--------------------------------------------------*/
+
 /* uitklap navigatie*/
 nav { 
 	display: flex; 
@@ -108,7 +112,7 @@ nav.toonMenu {
 
 .toonMenu img:first-of-type {
 	background-color: #fbdbe9;
-	width: 2em;
+	width: 2em !important;
 	border-radius: 10em;
 	padding: 0.5em
 }
@@ -118,7 +122,13 @@ nav.toonMenu {
 }
 
 .toonMenu button {
-	background-color: none;
+	background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding-right: 1em !important;
+    align-self: end;
+    padding: 0;
+    height: 2em;
 }
 
 
@@ -140,9 +150,27 @@ nav.toonMenu {
 	font-size: 1rem;
 	line-height: 1.625;
 	font-weight: 700;
+    margin:  0;
+    margin-bottom: 1em;
 }
 
+.toonMenu {
+    z-index: 2;
+}
+
+.toonMenu hr {
+    width: 95%;
+    text-align: left;
+    margin-left: 0;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+
+/*--------------------------------------------------*/
 /*SEARCH BAR*/
+/*--------------------------------------------------*/
+
 .search-container {
 	display: flex;
 	background-color:#f2f2f2;
@@ -179,7 +207,9 @@ nav.toonMenu {
 /*TRENDING*/
 /*------------------------*/
 
+/*--------------------------------------------------*/
 /* scrolbar*/
+/*--------------------------------------------------*/
 .scrolbar-container  {
 	display: flex;
 	overflow-x: auto;
@@ -211,7 +241,10 @@ nav.toonMenu {
     border: 0.1em solid #000; 
 }
 
+/*--------------------------------------------------*/
 /* filteren sorteren*/
+/*--------------------------------------------------*/
+
 .filter-sorteer {
 	display: flex;
 	margin-right: 1em;
@@ -250,61 +283,119 @@ h1 {
 	justify-content: center;
 }
 
+/*--------------------------------------------------*/
 /* Producten in grid*/
-.product-soort img{
-	width: 5em;
-}
+/*--------------------------------------------------*/
 
 .product-soort {
-	display: grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows:10em max-content;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto auto;
+    gap: 0.5em;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 1em; 
+    width: 15em;
 }
-/* Product afbeelding */
+
+.product-soort img {
+    max-width: 100%;
+    height: auto;
+}
+.product-soort li:nth-of-type(1) img {
+	width: 1.5em;
+} 
+.product-soort li:nth-of-type(3), .product-soort li:nth-of-type(5) img {
+	width: 3em;
+}
+
+.product-soort li:nth-of-type(7) img {
+	width: 6em;
+}
+
+/* Favorite icon (align to top-left) */
+.product-soort li:nth-of-type(1) {
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: start;
+}
+
+/* Product Image */
 .product-soort li:nth-of-type(2) {
-	grid-column-start: 2;
-	grid-row-start: 2;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
 }
 
-/*logo derma*/
+/* Logo */
 .product-soort li:nth-of-type(3) {
-	grid-column-start: 3;
-	grid-row-start: 1;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: start;
 }
 
-/* Productinformatie (100 ML zalf) */
+/* Product Info */
 .product-soort li:nth-of-type(4) {
-	grid-column-start: 1;
-	grid-row-start: 3;
+    grid-row: 3 / 4;
+    font-size: 0.9em;
+    color: #666;
 }
 
-/* Prijs */
+/* Price */
 .product-soort li:nth-of-type(5) {
-	grid-column-start: 3;
-	grid-row-start: 3;
+    grid-row: 3 / 4;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-/*product naam*/
+/* Product Name */
 .product-soort li:nth-of-type(6) {
-	grid-column-start: 1;
-	grid-row-start: 4;
+    grid-row: 4 / 5;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
 }
 
-/* aantal sterren*/
+/* Rating Stars */
 .product-soort li:nth-of-type(7) {
-	grid-column-start: 1;
-	grid-row-start: 5;
+    grid-row: 5 / 6;
+    justify-self: start;
+    align-self: center;
 }
 
-/* hoeveel reviews*/
+/* Reviews Count */
 .product-soort li:nth-of-type(8) {
 	grid-column-start: 2;
-	grid-row-start: 5;
+    grid-row: 5 / 6;
+    justify-self: start;
+    align-self: center;
 }
 
-/*voeg toe knop*/
+/* Add Button */
 .product-soort li:nth-of-type(9) {
-	grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 6;
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+}
+
+/* Button Style */
+.product-soort li:nth-of-type(9) button {
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 0.7em;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.product-soort li:nth-of-type(9) button:hover {
+    background-color: #333;
+    color: #fff;
 }
