@@ -180,7 +180,7 @@ nav.toonMenu {
 /*------------------------*/
 
 /* scrolbar*/
-.scrolbar-container ul {
+.scrolbar-container  {
 	display: flex;
 	overflow-x: auto;
 	gap: 1rem;
@@ -212,7 +212,7 @@ nav.toonMenu {
 }
 
 /* filteren sorteren*/
-.filter-sorteer ul {
+.filter-sorteer {
 	display: flex;
 	margin-right: 1em;
 	gap: 1em;
