@@ -32,7 +32,7 @@
 	<nav class="toonMenu">
 		<!-- De sluit button -->
 		<button aria-hidden="true">
-		  <img src="/images/close.png" alt="">
+		  <img src="/images/close.png" alt="Sluit knop">
 		</button>
 		
 		<ul>
@@ -80,16 +80,27 @@
 		</ul>
 
 		<ul class="filter-sorteer">
-			<li>
-				<img src="images/filter.png" alt="Filter menu">
-				<h2>Filteren</h2>
-			</li>
-			<li>
+			<button>
+				<img src="images/filter.png" alt="Filter drop down menu">
+				<h2>Filteren</h2>	
+			</button>
+
+			<button>
 				<h2>Sorteer</h2>
-				<img src="images/dropdown.png" alt="Drop down menu">
-			</li>
+				<img src="images/dropdown.png" alt="Sorteer Drop down menu">
+			</button>
 		</ul>
+
+		<ul class="filter-sorteer-menu">
+			<button aria-hidden="true">
+				<img src="/images/close.png" alt="Sluit">
+			</button>
+			<li><h2>Sorteer</h2></li>
+			<li><a href="#">Meest verkocht</a></li>
+		</ul>
+		
 		<p>76 resultaten</p>
+
 
 		<ul class="product-soort">
 			<li><img src="images/favoriteIcon.svg" alt="favorieten"></li>
@@ -102,7 +113,17 @@
 			<li><p>108</p></li>
 			<li><button>Voeg toe +</button></li>
 		</ul>
-
+		<ul class="product-soort">
+			<li><img src="images/favoriteIcon.svg" alt="favorieten"></li>
+			<li><img src="images/la-roche-posay-product1.png" alt="la roche posay"></li>
+			<li><img src="images/derma-care.png" alt="derma-care"></li>
+			<li><p>100 ML zalf</p></li>
+			<li><img src="images/product1-geld.png" alt="21,50 euro"></li>
+			<li><a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100...</a></li>
+			<li><img src="images/sterren-product1.png" alt="aantal sterren"></li>
+			<li><p>108</p></li>
+			<li><button>Voeg toe +</button></li>
+		</ul>
 	 </section>
 
 	<script src="scripts/script.js"></script>

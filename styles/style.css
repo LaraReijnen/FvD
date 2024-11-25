@@ -252,33 +252,36 @@ nav.toonMenu {
 .filter-sorteer {
 	display: flex;
 	margin-right: 1em;
-	gap: 1em;
+	gap: 0.5em;
 }
 
 .filter-sorteer img {
 	width: 2em;
 	height: 2em;
 }
-.filter-sorteer li {
+.filter-sorteer button {
 	display: flex;
 	align-items: center;
     border: 0.05em solid #000; 
 	border-radius: 0.7em;
+	background-color: white;
 	width: 50%;
-	height: 1.5em;
-	font-size: 0.8em;
+	height: 3.5em;
 	padding: 1em;
+	font-size: 0.7em;
+	font-weight: 100;
 }
 
-.filter-sorteer li:nth-of-type(1) {
+
+.filter-sorteer button:nth-of-type(1) {
 	gap:1em;
 }
 
-.filter-sorteer li:nth-of-type(2) {
+.filter-sorteer button:nth-of-type(2) {
 	display: flex;
 	justify-content:space-between;
 }
-.filter-sorteer li:hover {
+.filter-sorteer button:hover {
     border: 0.15em solid #000; 
 }
 
@@ -286,6 +289,32 @@ h1 {
 	display: flex;
 	justify-content: center;
 }
+
+/*--------------------------------------------------*/
+/* filteren sorteren pop up menu*/
+/*--------------------------------------------------*/
+.filter-sorteer-menu img {
+	width: 2em;
+}
+
+.filter-sorteer-menu {
+    position: fixed;
+    background-color: white;
+	border-radius: 15px;
+    top: 30%; 
+    bottom: 0; 
+    left: 0px; 
+    right: 0px; 
+    transform: translate(-100%);
+    transition: transform 0.3s;
+    z-index: 3;
+}
+
+/* Maak het sorteer-menu zichtbaar */
+.filter-sorteer-menu.toonSorteerMenu {
+    transform: translate(0); /* Breng het menu in beeld */
+}
+
 
 /*--------------------------------------------------*/
 /* Producten in grid*/
@@ -403,3 +432,20 @@ h1 {
     background-color: #333;
     color: #fff;
 }
+
+.test { 
+	display: flex; 
+	overflow-x: auto;
+	gap: 1rem;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	flex-direction: column; 
+	background-color: white; 
+	position: fixed; 
+	top: 0px; 
+	bottom: 0px; 
+	left: 0px; 
+	right: 0px; 
+	transform: translateX(-100%); 
+	transition: 0.3s; 
+} 
