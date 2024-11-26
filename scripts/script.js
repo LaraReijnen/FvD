@@ -31,10 +31,6 @@ function sluitMenu() {
 
 // Functie om het sorteer-menu te tonen
 function toonSorteerMenu() {
-  sorteerMenu.classList.add('toonSorteerMenu'); // Nieuwe klasse voor sorteer-menu
+  sorteerMenu.showModal();// Nieuwe klasse voor sorteer-menu
 }
 
-// Functie om het sorteer-menu te sluiten
-function sluitSorteerMenu() {
-  sorteerMenu.classList.remove('toonSorteerMenu'); // Nieuwe klasse voor sorteer-menu
-}

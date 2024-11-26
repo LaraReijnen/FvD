@@ -17,6 +17,9 @@ header img {
 }
 
 header {
+	left:0;
+	right:0;
+	top: 0;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 10px 20px;
@@ -34,6 +37,11 @@ header li {
     align-items: center;
 }
 
+header button {
+    background-color: transparent;
+    border:none;
+}
+
 .logo {
     width: 50px; /* Pas de grootte van het logo aan */
     margin-right: 15px;
@@ -46,6 +54,7 @@ header li {
     font-weight: bold;
     margin-right: auto; /* Zorgt ervoor dat de menu-items links blijven */
 	flex-direction:column;
+    padding: 0;
 }
 
 .menu img {
@@ -219,6 +228,7 @@ nav.toonMenu {
 	overflow-x: auto;
 	gap: 1rem;
 	-ms-overflow-style: none;  /* IE and Edge */
+    width: 90%;
 	scrollbar-width: none;  /* Firefox */
 }
 
@@ -293,28 +303,73 @@ h1 {
 /*--------------------------------------------------*/
 /* filteren sorteren pop up menu*/
 /*--------------------------------------------------*/
-.filter-sorteer-menu img {
-	width: 2em;
-}
-
 .filter-sorteer-menu {
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     background-color: white;
-	border-radius: 15px;
-    top: 30%; 
-    bottom: 0; 
-    left: 0px; 
-    right: 0px; 
-    transform: translate(-100%);
-    transition: transform 0.3s;
     z-index: 3;
+    padding: 2em;
+    overflow-y: auto;
 }
 
-/* Maak het sorteer-menu zichtbaar */
-.filter-sorteer-menu.toonSorteerMenu {
-    transform: translate(0); /* Breng het menu in beeld */
+.filter-sorteer-menu img {
+    width: 1.5em;
+    cursor: pointer;
+    top: 1em;
+    right: 1em;
 }
 
+.filter-sorteer-menu hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 1em 0;
+}
+
+.filter-sorteer-menu input[type="radio"] {
+    appearance: none; /* Verwijdert de standaard radio button styling */
+    width: 20px; /* Bepaalt de breedte van de knop */
+    height: 20px; /* Bepaalt de hoogte van de knop */
+    border: 2px solid #000; /* Zwarte rand */
+    border-radius: 50%; /* Maakt de knop rond */
+    display: inline-block; /* Zorgt voor inline positionering */
+    margin-right: 1em; /* Ruimte tussen knop en tekst */
+    outline: none; /* Verwijdert de standaard focus */
+    cursor: pointer; /* Wijst aan dat dit klikbaar is */
+    background-color: #fff; /* Witte achtergrond */
+    transition: background-color 0.3s ease; /* Gladde overgang voor kleur */
+}
+
+.filter-sorteer-menu input[type="radio"]:hover {
+    background-color: #cfe9e6; /* Lichtgroene achtergrondkleur bij hover */
+}
+
+.filter-sorteer-menu input[type="radio"]:checked {
+    background-color: #cfe9e6; /* Lichtgroene kleur bij selectie */
+    border-color: #000; /* Houdt de rand zwart bij selectie */
+}
+
+
+
+.filter-sorteer-menu label {
+    display: block;
+    margin: 1.5em 0;
+    font-size: 1rem;
+}
+
+dialog {
+    border:none;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+html:has(dialog[open]) {
+	overflow:hidden;
+	scrollbar-gutter: stable;
+}
 
 /*--------------------------------------------------*/
 /* Producten in grid*/
@@ -327,7 +382,7 @@ h1 {
     background-color: #f2f2f2;
     border-radius: 10px;
     padding: 1em; 
-    width: 15em;
+    width: 40%;
 }
 
 .product-soort img {
@@ -433,19 +488,8 @@ h1 {
     color: #fff;
 }
 
-.test { 
-	display: flex; 
-	overflow-x: auto;
-	gap: 1rem;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-	flex-direction: column; 
-	background-color: white; 
-	position: fixed; 
-	top: 0px; 
-	bottom: 0px; 
-	left: 0px; 
-	right: 0px; 
-	transform: translateX(-100%); 
-	transition: 0.3s; 
-} 
+.greenBlock li {
+    display: flex;
+    align-content: center;
+}
+
