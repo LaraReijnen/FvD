@@ -66,6 +66,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   bij mij tenminsten, misschien dat hij het normaal wel doet.
   voor de rest is de site wel mooi opgebauwt met code. ze gebruiken heel veel divs.
 
+  - een paar opmerkingen met de screanreader bij de etos site:
   Navigatie: Controleer of de website eenvoudig te navigeren is met een toetsenbord en of alle interactieve elementen, zoals knoppen en links, correct worden aangekondigd door de screenreader.
 
   Afbeeldingen: Zorg ervoor dat alle afbeeldingen voorzien zijn van alternatieve tekstbeschrijvingen (alt-teksten) die door de screenreader worden voorgelezen.
@@ -85,10 +86,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Als de website modale vensters, pop-ups of sliders heeft, test dan of deze toegankelijk zijn. Bij een pop-up moet de screenreader bijvoorbeeld automatisch de focus verplaatsen naar de pop-up.
 
   Zorg ervoor dat knoppen zoals "Sluiten" duidelijk zijn en goed werken.
-  
+
   Pas ARIA correct toe: Gebruik ARIA-labels en -rollen (zoals aria-label en role) om de toegankelijkheid van interactieve elementen te verbeteren.
 
   Onderhoud regelmatig: Toegankelijkheid is geen eenmalige taak. Controleer bij elke update van de website of de toegankelijkheid behouden blijft.
+
   ### bevindingen met coderen
   - navigatie
   ik ben begonnen met de navigatie en na een werkgroep toen we de hamburger menu oefening moesten doen kwam ik er achter dat ik de navigatie helemaal anders moest opstellen.
@@ -101,10 +103,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### wat ik deze week heb geleerd
   ik heb deze week geleerd over de flexbox, grid en javasript. door de oefeingen te doen in de werkgroep ben ik er wel een stuk beter in geworden en vind ik het ook makkelijker om toe te passen in mijn site.
-
-
-
-
 
 </details>
 
@@ -132,20 +130,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
-
+  
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+    Deze week heb ik gewerkt aan de navigatie, slideshow en het hamburger menu. Door de werkgroep ontdekte ik dat ik mijn navigatie opnieuw moest opstellen. Het maken van de slideshow ging soepel dankzij de oefeningen, maar het vormgeven van het hamburger menu met CSS vond ik uitdagend, hoewel het met JavaScript werkt. Daarnaast heb ik veel geleerd over flexbox, grid en JavaScript, en dankzij de oefeningen voel ik me zekerder in het toepassen hiervan op mijn website.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -206,10 +194,28 @@ Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke websi
 <details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
+  ### Wat ik heb gedaan met mijn code deze week
+  - Productweergave: Ik ben begonnen met het plaatsen van mijn producten. In het begin had ik moeite omdat de layout niet meebewoog wanneer ik de schermbreedte aanpaste. Later ontdekte ik dat dit kwam door de vaste width. Na het aanpassen werkte het goed.
+  - Sorteerknop: Vervolgens heb ik gewerkt aan een sorteerknop. In eerste instantie gebruikte ik dezelfde aanpak als bij mijn navigatieknop (met een ul en li's), maar tijdens de les leerde ik dat dit beter kon met een dialog en een form, omdat het de hele pagina overneemt. Dit vond ik in het begin lastig, maar na de uitleg begreep ik het. Toen het functioneerde, heb ik de styling met CSS afgerond en passende kleuren toegevoegd.
+  - Algemene layout: Ik heb de elementen op de juiste breedte gezet. Voorheen stonden delen niet goed uitgelijnd, omdat ze op verschillende lijnen begonnen. Door een padding van 1em te gebruiken, is dit nu gecorrigeerd.
+
+
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  - Wat ging goed
+  Productweergave: Het plaatsen van mijn producten ging uiteindelijk goed nadat ik ontdekte dat de vaste width het responsive gedrag blokkeerde. Door dit aan te passen, beweegt de layout nu mee met de schermbreedte.
 
+  Sorteerknop: Na de uitleg in de les begreep ik hoe ik een dialog en form moest gebruiken in plaats van een ul met li's. Dit werkte goed en ik kon de styling afronden met passende kleuren, wat het geheel er strak laat uitzien.
 
+  Layout aanpassingen: Door padding van 1em toe te voegen, staan alle delen nu netjes uitgelijnd, wat een meer consistente uitstraling geeft aan de pagina.
+
+  - wat ging minder goed
+  Responsive gedrag van de producten: In het begin begreep ik niet waarom mijn layout niet meebewoog met de schermbreedte. Het vinden van de oorzaak (de vaste width) kostte me wat tijd.
+
+  Dialog implementatie: De overstap van een ul naar een dialog met een form was een uitdaging, vooral omdat ik dit concept nog niet eerder had toegepast. Pas na uitleg begreep ik hoe dit moest werken.
+
+  Styling van de sorteerknop: Het stylen van de sorteerknop en het dialog-element vereiste wat experimenteren voordat ik tevreden was met het resultaat.
+  
   ### Agenda voor meeting
   samen met je groepje opstellen
 
