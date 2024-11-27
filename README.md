@@ -66,6 +66,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   bij mij tenminsten, misschien dat hij het normaal wel doet.
   voor de rest is de site wel mooi opgebauwt met code. ze gebruiken heel veel divs.
 
+  Navigatie: Controleer of de website eenvoudig te navigeren is met een toetsenbord en of alle interactieve elementen, zoals knoppen en links, correct worden aangekondigd door de screenreader.
+
+  Afbeeldingen: Zorg ervoor dat alle afbeeldingen voorzien zijn van alternatieve tekstbeschrijvingen (alt-teksten) die door de screenreader worden voorgelezen.
+  
+  Kopstructuur: Verifieer of de pagina een logische hiërarchie van koppen (H1, H2, H3, etc.) heeft, zodat de screenreader de structuur van de inhoud correct kan overbrengen.
+  
+  Formulieren: Controleer of alle formulieren correct zijn gelabeld en of de screenreader de gebruiker adequaat door het formulier leidt.
+  
+  Dynamische Inhoud: Zorg ervoor dat dynamische inhoud, zoals pop-ups of modale vensters, correct wordt aangekondigd en toegankelijk is voor screenreader-gebruikers.
+
+  Toetsenbordgebruik: Screenreader-gebruikers navigeren vaak met het toetsenbord. Probeer de website te bedienen zonder muis en controleer of je bij alle interactieve elementen kunt komen (zoals knoppen, links en formulieren).
+
+  Tab-volgorde: Controleer of de focuslogica logisch is, bijvoorbeeld of de tab-volgorde overeenkomt met de visuele presentatie
+
+  Controleer of afbeeldingen op de website een beschrijvende alt-tekst hebben. Dit kan worden gedaan door een screenreader zoals NVDA, VoiceOver (voor Mac) of JAWS te gebruiken. Je kunt bijvoorbeeld langs een afbeelding navigeren en luisteren wat de screenreader zegt.
+
+  Als de website modale vensters, pop-ups of sliders heeft, test dan of deze toegankelijk zijn. Bij een pop-up moet de screenreader bijvoorbeeld automatisch de focus verplaatsen naar de pop-up.
+
+  Zorg ervoor dat knoppen zoals "Sluiten" duidelijk zijn en goed werken.
+  
+  Pas ARIA correct toe: Gebruik ARIA-labels en -rollen (zoals aria-label en role) om de toegankelijkheid van interactieve elementen te verbeteren.
+
+  Onderhoud regelmatig: Toegankelijkheid is geen eenmalige taak. Controleer bij elke update van de website of de toegankelijkheid behouden blijft.
   ### bevindingen met coderen
   - navigatie
   ik ben begonnen met de navigatie en na een werkgroep toen we de hamburger menu oefening moesten doen kwam ik er achter dat ik de navigatie helemaal anders moest opstellen.
@@ -93,17 +116,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown.schets.trending.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/Breakdownschets1.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdownschets.klantenservice.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
 
 
 </details>
-
-
 
 
 
