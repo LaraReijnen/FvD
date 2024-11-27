@@ -215,13 +215,13 @@ Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke websi
   Dialog implementatie: De overstap van een ul naar een dialog met een form was een uitdaging, vooral omdat ik dit concept nog niet eerder had toegepast. Pas na uitleg begreep ik hoe dit moest werken.
 
   Styling van de sorteerknop: Het stylen van de sorteerknop en het dialog-element vereiste wat experimenteren voordat ik tevreden was met het resultaat.
-  
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | moet je het menu verder werkend maken? en zo ja hoe zet je dat in de code?        | ---                | ---          | ---              |
+  |onderin de pagina, wat is het? een ul met li ( bij de plaatjes)  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
