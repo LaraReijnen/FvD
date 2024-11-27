@@ -310,7 +310,7 @@ h1 {
 /*--------------------------------------------------*/
 /* filteren sorteren pop up menu*/
 /*--------------------------------------------------*/
-.filter-sorteer-menu {
+.filter-sorteer-menu, .sorteer-menu {
     position: absolute;
     margin-bottom: 0;
     width: 100%;
@@ -320,11 +320,17 @@ h1 {
     overflow-y: auto;
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
-
 }
 
 
 .filter-sorteer-menu img {
+    width: 1.5em;
+    cursor: pointer;
+    top: 1em;
+    right: 1em;
+}
+
+.sorteer-menu img{
     width: 1.5em;
     cursor: pointer;
     top: 1em;
