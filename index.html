@@ -33,7 +33,7 @@
 		  </ul>
 	</header>
   
-	<nav class="toonMenu">
+	<nav class="">
 		<!-- De sluit button -->
 		<button aria-hidden="true">
 		  <img src="/images/close.png" alt="Sluit knop">
@@ -49,7 +49,7 @@
 		  <li><a href="#"><img src="images/zwanger-baby-kind.png" alt="Zwanger, Baby en Kind"> <span>Zwanger, Baby en Kind</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
 		  <li><a href="#"><img src="images/thuis-en-op-rijs.png" alt="Thuis & op reis"> <span>Thuis & op reis</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
 		  <li><a href="#"><img src="images/cadeaus.png" alt="Cadeaus"> <span>Cadeaus</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/trending.png" alt="Trending"> <span>Trending</span> </a></li>
+		  <li><a href="index.html"><img src="images/trending.png" alt="Trending"> <span>Trending</span> </a></li>
 		  <li><a href="#"><img src="images/eerder-gekocht.png" alt="Eerder gekocht"> <span>Eerder gekocht</span> </a></li>
 		  <li><h2>Account</h2></li>
 		  <hr>
@@ -57,7 +57,7 @@
 		  <hr>
 		  <li><a href="#"><img src="images/voordeel.png" alt="Voordeel"> <span>Voordeel met mijn etos</span> </a></li>
 		  <hr>
-		  <li><a href="#"> Service </a></li>
+		  <li><a href="service.html"> Service </a></li>
 		  <li><a href="#"> Winkels </a></li>
 		</ul>
 	  </nav>
@@ -154,44 +154,10 @@
 		
 				<!-- Dropdown 1 -->
 				<details>
-					<summary>Sorteer opties</summary>
-					<div>
-						<label>
-							<input type="radio" name="sort" value="meest-verkocht">
-							Meest verkocht
-						</label>
-						<label>
-							<input type="radio" name="sort" value="prijs-laag-hoog">
-							Prijs laag naar hoog
-						</label>
-						<label>
-							<input type="radio" name="sort" value="prijs-hoog-laag">
-							Prijs hoog naar laag
-						</label>
-						<label>
-							<input type="radio" name="sort" value="beoordeling">
-							Beoordeling
-						</label>
-					</div>
-				</details>
-		
-				<!-- Dropdown 2 -->
-				<details>
-					<summary>Prijs bereik</summary>
-					<div>
-						<label for="min-price">Min:</label>
-						<input type="number" id="min-price" name="min-price" placeholder="€0">
-						<label for="max-price">Max:</label>
-						<input type="number" id="max-price" name="max-price" placeholder="€100">
-					</div>
-				</details>
-		
-				<!-- Dropdown 3 -->
-				<details>
-					<summary>Merk</summary>
-					<div>
+					<summary>Product Type</summary>
+					<div class="merk-div">
 						<input type="search" placeholder="Zoek merk">
-						<ul>
+						<ul class="merk">
 							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
 							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
 							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
@@ -200,6 +166,133 @@
 					</div>
 				</details>
 		
+
+				<!-- Dropdown 2 -->
+				<details>
+					<summary>Merk</summary>
+					<div class="merk-div">
+						<input type="search" placeholder="Zoek merk">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="loreal"> L'Oréal Paris</label></li>
+						</ul>
+					</div>
+				</details>
+
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Geschikt voor</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="loreal"> L'Oréal Paris</label></li>
+						</ul>
+					</div>
+				</details>
+		
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>SPF Factor</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>
+
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Geschikt voor huidtype</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>				
+
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Huidprobleem</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>		
+
+
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Type aanbieding</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>	
+
+
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Lijn</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>		
+				
+				<!-- Dropdown 3 -->
+				<details>
+					<summary>Kleur</summary>
+					<div class="merk-div">
+						<ul class="merk">
+							<li><label><input type="checkbox" name="merk" value="elf"> e.l.f.</label></li>
+							<li><label><input type="checkbox" name="merk" value="w7"> W7</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+							<li><label><input type="checkbox" name="merk" value="nyx"> NYX Professional Makeup</label></li>
+						</ul>
+					</div>
+				</details>					
+
+				<!-- Dropdown 2 -->
+				<details>
+					<summary>Prijs</summary>
+					<div>
+					  <label for="price-range">Prijs:</label>
+					  <input type="range" id="price-range-min" name="min-price" min="0" max="100" value="0">
+					  <input type="range" id="price-range-max" name="max-price" min="0" max="100" value="100">
+					  <div>
+						<span>Min: €<span id="min-price-display">0</span></span>
+						<span>Max: €<span id="max-price-display">100</span></span>
+					  </div>
+					</div>
+				  </details>
+				  
+
 				<!-- Dropdown 4 -->
 				<details>
 					<summary>SPF Factor</summary>
