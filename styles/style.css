@@ -33,8 +33,11 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 10px 20px;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
-
+.header-iconen
 header ul {
     display: flex;
     align-items: center;
@@ -62,9 +65,14 @@ header button {
     align-items: center;
     font-size: 16px;
     font-weight: bold;
-    margin-right: auto; /* Zorgt ervoor dat de menu-items links blijven */
+    margin-right: auto;
 	flex-direction:column;
     padding: 0;
+}
+
+.menu p {
+    margin:0;
+    
 }
 
 .menu img {
