@@ -322,11 +322,64 @@ h1 {
     margin-bottom: 0;
     width: 100%;
     background-color: white;
+    height: 700px;
     z-index: 3;
     padding: 1em;
     overflow-y: auto;
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+}
+
+/* Remove default marker from <summary> */
+summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Remove the default marker */
+}
+
+/* Add custom arrow */
+summary::after {
+    content: "▼"; /* Downward arrow */
+    font-size: 0.8rem;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when details is open */
+details[open] summary::after {
+    transform: rotate(180deg); /* Arrow points upward */
+}
+
+/* Styling for details content */
+details div {
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Make labels stack in their own rows */
+details div label {
+    display: block; /* Stack labels */
+    margin-bottom: 5px; /* Add spacing between labels */
+}
+
+details {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }
 
 
@@ -492,6 +545,17 @@ dialog h2 {
     display: inline-block; /* Zorg dat de afbeelding inline is */
 }
 
+.dropdown {
+    width: 100%;
+}
+
+#sort-options {
+    width: 100%;
+    border: 0;
+}
+
+
+
 .product-soort span p {
     font-size: 1em; /* Tekstgrootte aanpassen */
     color: #666;
@@ -517,6 +581,18 @@ dialog h2 {
     transition: background-color 0.3s, color 0.3s;
 }
 
+fieldset {
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-group {
+    display: flex;
+    padding-right: 1em;
+}
+
 /* Hover effect voor de knop */
 .product-soort button:hover {
     background-color: #333;
@@ -524,8 +600,19 @@ dialog h2 {
 }
 
 .greenBlock {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
     background-color: #A7D7C1;
     padding: 1em;
+    border-radius: 1em;
+}
+
+.greenBlock p {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    background-color: #A7D7C1;
     border-radius: 1em;
 }
 /*--------------------------------------------------*/
