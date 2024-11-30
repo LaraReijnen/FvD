@@ -230,9 +230,18 @@ Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke websi
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - punt 1
+  een navigatie knop uitwerken.
+
   - punt 2
-  - nog een punt
-- ...
+  surfplane, bekijken. filteren soorteren is al iets.
+  hartje laten kloppen. javascript week. 
+
+  - punt 3
+  het kan om de roze header anders te maken. als ik uitleg waarom iets iets anders kan, dan mag het.
+
+  - punt 4
+  sterretjes; width:1.5 em moet weg: .product-soort img:nth(1)
+
 
 </details>
 

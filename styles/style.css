@@ -426,7 +426,7 @@ dialog h2 {
 }
 
 /* Favorieten icoon (eerste afbeelding) */
-.product-soort img:nth-of-type(1) {
+.product-soort > img:nth-of-type(1) {
     width: 1.5em;
     grid-row: 1 / 2;
     justify-self: start;
