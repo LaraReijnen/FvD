@@ -4,6 +4,10 @@ body {
 	margin: 0;
 }
 
+a {
+    color: #000;
+}
+
 ul {
 	list-style: none;
 }
@@ -721,19 +725,31 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 /*--------------------------------------------------*/
 /* grijs-blok-links*/
 /*--------------------------------------------------*/
-.grijs-blok-links img {
-    width: 1em;
-}
-.grijs-blok-links a {
-    text-decoration: none;
-    color: inherit;
-    margin: 1em;
-}
-
 .grijs-blok-links {
     background-color: #f2f2f2;
-    padding: 0;
-    margin: 1em;
+    padding: 1em;
+    margin: 0;
+    list-style: none;
+}
+
+.grijs-blok-links li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7em;
+}
+
+.grijs-blok-links img {
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+.grijs-blok-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+.grijs-blok-links a:hover {
+    text-decoration: underline; /* Onderstreping bij hover makkelijkertoegankelijk*/
 }
 
 
@@ -857,6 +873,223 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
         align-items: center;
     }
 }
-.lala ul {
+
+.disc ul {
     list-style: disc;
 }
+
+.section-service > a {
+    font-size: large;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------*/
+/*scrol bar*/
+/*--------------------------------------------------*/
+.onderwerpen-op-rij {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    gap: 1em;
+    scroll-behavior: smooth;
+}
+
+.onderwerpen-op-rij li {
+    flex-shrink: 0; 
+}
+
+.onderwerpen-op-rij a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-decoration: none;
+    text-align: center;
+}
+
+.onderwerpen-op-rij div {
+    width: 150px;
+    height: 150px;
+    background-color: #F8C9DD;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onderwerpen-op-rij img {
+    width: 50px;
+    height: 50px;
+}
+
+.onderwerpen-op-rij p {
+    font-size: 1em;
+    margin-top: 0.5em;
+    color: black;
+    line-height: 1.2;
+    white-space: nowrap; /* Zorg ervoor dat tekst niet afbreekt */
+}
+
+/*--------------------------------------------------*/
+/*zoek etos winkel blok*/
+/*--------------------------------------------------*/
+.zoek-etos-winkel {
+    background-color: #D3EBE0;
+    border-radius: 0.9375em;
+    padding: 1.25em;
+    max-width: 37.5em;
+    margin: 1.25em auto;
+}
+
+.zoek-etos-winkel img {
+    width: 100%;
+    display: block;
+}
+
+.zoek-etos-winkel li {
+    padding: 0;
+}
+
+.zoek-etos-winkel .button-zwart {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.9em 1.25em;
+    border-radius: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zoek-etos-winkel .button-zwart:hover {
+    background-color: #575757;
+}
+
+.button-wit {
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 0.9em 1.25em;
+    border-radius: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.zoek-etos-winkel .button-wit:hover {
+    background-color: #E1F1EA;
+    border: 1.2px solid #000;
+}
+
+/*--------------------------------------------------*/
+/*contact*/
+/*--------------------------------------------------*/
+.contact-klantenservice p{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-klantenservice {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+/*--------------------------------------------------*/
+/*mijn etos*/
+/*--------------------------------------------------*/
+
+.links-footer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-footer li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625em;
+}
+
+.links-footer img {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.625em;
+}
+
+.links-footer a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 0.875em;
+}
+
+.inloggen {
+    width: 100%;
+    padding: 0.625em 1.25em;
+    border: 0.063em solid black;
+    border-radius: 0.625em;
+    background-color: white;
+    color: black;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.inloggen:hover {
+    border: 0.125em solid #000;
+}
+
+/*--------------------------------------------------*/
+/*footer*/
+/*--------------------------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25em;
+}
+
+footer img {
+    max-width: 80%;
+    height: auto;
+    margin: 1.25em 0;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9em;
+    list-style: none;
+    padding: 1.25em;
+    border: 0.125em solid palevioletred;
+    border-radius: 0.625em;
+    margin: 1.25em 0;
+    text-align: center;
+}
+
+footer ul li {
+    font-size: 0.875em;
+    color: #333;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.3em;
+    transition: text-decoration 0.3s ease;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+footer ul li:first-of-type {
+    color: #575757;
+}
+
+

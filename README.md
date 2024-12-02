@@ -254,9 +254,12 @@ Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke websi
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
+  ### veranderingen
+  voor de toegankelijkheid van mijn site heb ik een paar dingen evrander waaronder, odnerin de pagina heb je linkjes met daarvoor een vinkje. het is logiscch als hij onderstreeo word als je erover hoverd aangezien je dan makkelijker ziet dat je muis erop zit en dat het een link is een niet zomaar een blok met tekst.
+  
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  
 </details>
 
 
