@@ -66,52 +66,52 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   bij mij tenminsten, misschien dat hij het normaal wel doet.
   voor de rest is de site wel mooi opgebauwt met code. ze gebruiken heel veel divs.
 
-  - een paar opmerkingen met de screanreader bij de etos site:
-  Navigatie: Controleer of de website eenvoudig te navigeren is met een toetsenbord en of alle interactieve elementen, zoals knoppen en links, correct worden aangekondigd door de screenreader.
+  ## een paar opmerkingen met de screanreader bij de etos site:
+- Navigatie: Controleer of de website eenvoudig te navigeren is met een toetsenbord en of alle interactieve elementen, zoals knoppen en links, correct worden aangekondigd door de screenreader.
 
-  Afbeeldingen: Zorg ervoor dat alle afbeeldingen voorzien zijn van alternatieve tekstbeschrijvingen (alt-teksten) die door de screenreader worden voorgelezen.
+- Afbeeldingen: Zorg ervoor dat alle afbeeldingen voorzien zijn van alternatieve tekstbeschrijvingen (alt-teksten) die door de screenreader worden voorgelezen.
   
-  Kopstructuur: Verifieer of de pagina een logische hiërarchie van koppen (H1, H2, H3, etc.) heeft, zodat de screenreader de structuur van de inhoud correct kan overbrengen.
+- Kopstructuur: Verifieer of de pagina een logische hiërarchie van koppen (H1, H2, H3, etc.) heeft, zodat de screenreader de structuur van de inhoud correct kan overbrengen.
   
-  Formulieren: Controleer of alle formulieren correct zijn gelabeld en of de screenreader de gebruiker adequaat door het formulier leidt.
+- Formulieren: Controleer of alle formulieren correct zijn gelabeld en of de screenreader de gebruiker adequaat door het formulier leidt.
   
-  Dynamische Inhoud: Zorg ervoor dat dynamische inhoud, zoals pop-ups of modale vensters, correct wordt aangekondigd en toegankelijk is voor screenreader-gebruikers.
+- Dynamische Inhoud: Zorg ervoor dat dynamische inhoud, zoals pop-ups of modale vensters, correct wordt aangekondigd en toegankelijk is voor screenreader-gebruikers.
 
-  Toetsenbordgebruik: Screenreader-gebruikers navigeren vaak met het toetsenbord. Probeer de website te bedienen zonder muis en controleer of je bij alle interactieve elementen kunt komen (zoals knoppen, links en formulieren).
+- Toetsenbordgebruik: Screenreader-gebruikers navigeren vaak met het toetsenbord. Probeer de website te bedienen zonder muis en controleer of je bij alle interactieve elementen kunt komen (zoals knoppen, links en formulieren).
 
-  Tab-volgorde: Controleer of de focuslogica logisch is, bijvoorbeeld of de tab-volgorde overeenkomt met de visuele presentatie
+- Tab-volgorde: Controleer of de focuslogica logisch is, bijvoorbeeld of de tab-volgorde overeenkomt met de visuele presentatie
 
-  Controleer of afbeeldingen op de website een beschrijvende alt-tekst hebben. Dit kan worden gedaan door een screenreader zoals NVDA, VoiceOver (voor Mac) of JAWS te gebruiken. Je kunt bijvoorbeeld langs een afbeelding navigeren en luisteren wat de screenreader zegt.
+- Controleer of afbeeldingen op de website een beschrijvende alt-tekst hebben. Dit kan worden gedaan door een screenreader zoals NVDA, VoiceOver (voor Mac) of JAWS te gebruiken. Je kunt bijvoorbeeld langs een afbeelding navigeren en luisteren wat de screenreader zegt.
 
-  Als de website modale vensters, pop-ups of sliders heeft, test dan of deze toegankelijk zijn. Bij een pop-up moet de screenreader bijvoorbeeld automatisch de focus verplaatsen naar de pop-up.
+- Als de website modale vensters, pop-ups of sliders heeft, test dan of deze toegankelijk zijn. Bij een pop-up moet de screenreader bijvoorbeeld automatisch de focus verplaatsen naar de pop-up.
 
-  Zorg ervoor dat knoppen zoals "Sluiten" duidelijk zijn en goed werken.
+- Zorg ervoor dat knoppen zoals "Sluiten" duidelijk zijn en goed werken.
 
-  Pas ARIA correct toe: Gebruik ARIA-labels en -rollen (zoals aria-label en role) om de toegankelijkheid van interactieve elementen te verbeteren.
+- Pas ARIA correct toe: Gebruik ARIA-labels en -rollen (zoals aria-label en role) om de toegankelijkheid van interactieve elementen te verbeteren.
 
-  Onderhoud regelmatig: Toegankelijkheid is geen eenmalige taak. Controleer bij elke update van de website of de toegankelijkheid behouden blijft.
+- Onderhoud regelmatig: Toegankelijkheid is geen eenmalige taak. Controleer bij elke update van de website of de toegankelijkheid behouden blijft.
 Observatie: Niet elk losstaand kopje wordt voorgelezen (Vergelijking met Etos-site)
 
-Bevinding: Tijdens het testen van de toegankelijkheid viel op dat de screenreader op de Etos-website niet elk losstaand kopje voorleest. Dit gedrag komt overeen met wat ook op jouw website gebeurt. Je vraagt je af of dit correct is of dat er sprake is van een toegankelijkheidsprobleem.
+ ## Bevinding: Tijdens het testen van de toegankelijkheid viel op dat de screenreader op de Etos-website niet elk losstaand kopje voorleest. Dit gedrag komt overeen met wat ook op jouw website gebeurt. Je vraagt je af of dit correct is of dat er sprake is van een toegankelijkheidsprobleem.
 Wat betekent "losstaand kopje" in dit geval?
 
 Een losstaand kopje verwijst waarschijnlijk naar een koptekst (bijvoorbeeld een H1, H2, H3, etc.) die zelfstandig in de structuur staat zonder directe, visueel gekoppelde inhoud zoals tekst, beschrijvingen of andere elementen. Dit kan bijvoorbeeld gebeuren in een sectie waar een kopje wordt gebruikt als sectie-indicator, maar waar de daadwerkelijke inhoud elders staat of niet gekoppeld is aan dat specifieke kopje.
 Waarom wordt niet elk kopje voorgelezen door een screenreader?
 
     Technische oorzaken:
-        Gebruik van aria-hidden="true": Als een kopje expliciet verborgen is voor assistieve technologie via aria-hidden="true", wordt het niet voorgelezen door screenreaders.
-        Onjuiste structuur: Kopjes zonder duidelijke hiërarchie (bijvoorbeeld een H3 zonder voorafgaande H1 of H2) kunnen soms door screenreaders worden genegeerd omdat ze de semantische volgorde niet begrijpen.
-        Tabindex-issues: Als een kopje niet in de natuurlijke volgorde van de DOM zit of is verborgen met negatieve tabindex (bijv. tabindex="-1"), kan het worden overgeslagen.
-        CSS-styling: In sommige gevallen kan inhoud die visueel wordt verborgen via CSS (zoals display: none of visibility: hidden) onzichtbaar blijven voor screenreaders.
+  - Gebruik van aria-hidden="true": Als een kopje expliciet verborgen is voor assistieve technologie via aria-hidden="true", wordt het niet voorgelezen door screenreaders.
+  - Onjuiste structuur: Kopjes zonder duidelijke hiërarchie (bijvoorbeeld een H3 zonder voorafgaande H1 of H2) kunnen soms door screenreaders worden genegeerd omdat ze de semantische volgorde niet begrijpen.
+  - Tabindex-issues: Als een kopje niet in de natuurlijke volgorde van de DOM zit of is verborgen met negatieve tabindex (bijv. tabindex="-1"), kan het worden overgeslagen.
+  - CSS-styling: In sommige gevallen kan inhoud die visueel wordt verborgen via CSS (zoals display: none of visibility: hidden) onzichtbaar blijven voor screenreaders.
 
     Intentie van de ontwikkelaars:
-        Soms kiezen ontwikkelaars ervoor om bepaalde elementen niet voor te laten lezen als ze als overbodig of niet-informatief worden beschouwd. Dit kan bijvoorbeeld het geval zijn bij decoratieve koppen of visuele opsmuk zonder inhoudelijke waarde.
+    - Soms kiezen ontwikkelaars ervoor om bepaalde elementen niet voor te laten lezen als ze als overbodig of niet-informatief worden beschouwd. Dit kan bijvoorbeeld het geval zijn bij decoratieve koppen of visuele opsmuk zonder inhoudelijke waarde.
 
     Screenreader-specifieke interpretaties:
-        Screenreaders hebben verschillende manieren om inhoud te interpreteren. Sommige screenreaders filteren elementen die als minder relevant worden beschouwd, zoals een kopje zonder directe inhoud, afhankelijk van de gebruikersinstellingen.
+    - Screenreaders hebben verschillende manieren om inhoud te interpreteren. Sommige screenreaders filteren elementen die als minder relevant worden beschouwd, zoals een kopje zonder directe inhoud, afhankelijk van de gebruikersinstellingen.
 
     Vergelijking met de Etos-site:
-        Het gedrag dat je beschrijft op de Etos-site wijst erop dat dit mogelijk een bewuste keuze is geweest van de ontwikkelaars. Ze hebben wellicht besloten om bepaalde kopjes niet toegankelijk te maken voor screenreaders, bijvoorbeeld omdat ze puur visueel bedoeld zijn.
+    - Het gedrag dat je beschrijft op de Etos-site wijst erop dat dit mogelijk een bewuste keuze is geweest van de ontwikkelaars. Ze hebben wellicht besloten om bepaalde kopjes niet toegankelijk te maken voor screenreaders, bijvoorbeeld omdat ze puur visueel bedoeld zijn.
   ### bevindingen met coderen
   - navigatie
   ik ben begonnen met de navigatie en na een werkgroep toen we de hamburger menu oefening moesten doen kwam ik er achter dat ik de navigatie helemaal anders moest opstellen.
