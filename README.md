@@ -363,6 +363,16 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  
+  vragen over:
+  - waarom op de trending pagina niet ze automatisch naast elkaar komen.
+  - ipv zwart wit modes, of ik een andere modus ervan kan amken zonder de plaatjes aan te hoeven passen.
+  - vragen over de screan reader, hoe je de dubbelen namen weghaald.
+  - vragen over wat ik heb gemist in de vorige les over animeren.
+  - is de list en grid goed of meoten het plaatjes woorden: ik vind dit voor de screan reader meer overzichtelijk.
+  
+
+
 
 
   ### Agenda voor meeting
