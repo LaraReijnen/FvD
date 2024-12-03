@@ -256,9 +256,78 @@ Deze punten zullen bijdragen aan een gebruiksvriendelijke en toegankelijke websi
 
   ### veranderingen
   voor de toegankelijkheid van mijn site heb ik een paar dingen evrander waaronder, odnerin de pagina heb je linkjes met daarvoor een vinkje. het is logiscch als hij onderstreeo word als je erover hoverd aangezien je dan makkelijker ziet dat je muis erop zit en dat het een link is een niet zomaar een blok met tekst.
-  
+
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+ - Dubbele voorlezing van namen bij links met afbeeldingen
+
+   Bevinding: Wanneer een link is gekoppeld aan een 
+   afbeelding, leest de screenreader de naam van de link en de alternatieve tekst (alt-tekst) van de afbeelding afzonderlijk voor. Dit resulteert in een dubbele voorlezing van dezelfde naam.
+   
+   Toelichting: Dit kan verwarrend en inefficiënt zijn voor gebruikers van screenreaders, omdat dezelfde informatie onnodig wordt herhaald.
+   
+   Verbetering:
+      - Controleer de HTML-structuur van de links met afbeeldingen. Zorg ervoor dat de alt-tekst van het plaatje alleen aanvullende informatie bevat of geheel weggelaten wordt als de naam van de link al voldoende beschrijvend is.
+       - Gebruik aria-hidden="true" op de afbeelding als deze geen unieke informatie toevoegt aan de link.
+   
+2. Onvolledige voorlezing bij productoverzichten
+
+- Bevinding: Bij het navigeren door productoverzichten leest de screenreader alleen de H2-titels van de producten en de "Voeg toe"-knop voor. Andere elementen, zoals de beschrijvende paragrafen (P) en de knop "Toevoegen aan favorieten", worden niet voorgelezen.
+
+Toelichting: Gebruikers ontvangen daardoor onvoldoende context over de producten en missen essentiële functies zoals het toevoegen aan favorieten.
+
+Verbetering:
+
+    - Controleer de semantische structuur van de productoverzichten. Zorg ervoor dat alle relevante tekst, inclusief beschrijvingen en knoppen, correct is geannoteerd met ARIA-attributen (zoals aria-label of aria-describedby).
+    - Voeg tabindex toe aan interactieve elementen om ze toegankelijk te maken voor screenreaders.
+
+3. Niet voorgelezen kop "Veelgestelde vragen" (H2)
+
+- Bevinding: De kop "Veelgestelde vragen" wordt door de screenreader niet voorgelezen, ondanks dat het een H2 is.
+
+Toelichting: Dit wijst mogelijk op een probleem met de HTML-structuur, zoals verkeerd gesloten tags, een conflict met ARIA-attributen, of een script dat de kop onzichtbaar maakt voor assistieve technologie.
+
+Verbetering:
+
+  - Controleer of de H2 correct is geïmplementeerd in de DOM-structuur.
+    - Zorg dat de H2 geen onbedoelde attributen heeft, zoals aria-hidden="true".
+    - Test met verschillende screenreaders om te achterhalen of dit een browser- of screenreader-specifiek probleem is.
+
+4. Niet voorgelezen losse paragrafen (P) en koppen
+
+- Bevinding: De screenreader slaat regelmatig losse tekst in paragrafen (P) en koppen (H) over.
+
+Toelichting: Dit kan veroorzaakt worden door incorrecte implementatie, zoals:
+
+  - Inhoud die wordt weergegeven met CSS en niet in de DOM-structuur staat.
+  - Inhoud met aria-hidden="true" of een verkeerde tabindex-waarde.
+  - Een gebrek aan duidelijke navigatie of hiërarchie in de semantische opmaak.
+
+Verbetering:
+
+  - Controleer of alle inhoud in de DOM aanwezig is en zichtbaar is voor screenreaders.
+  - Gebruik een logische hiërarchie van koppen (H1, H2, H3, etc.) en zorg ervoor dat paragrafen correct als P zijn gemarkeerd.
+  - Voeg waar nodig ARIA-attributen toe om de hiërarchie en context te verduidelijken.
+
+5. Vergelijking met de Etos-site: inconsistent voorlezen van koppen
+
+Bevinding: Een soortgelijk probleem doet zich voor op de Etos-website, waar bepaalde koppen niet worden voorgelezen. Het is onduidelijk of dit een goed praktijkvoorbeeld is of dat er sprake is van een probleem.
+
+Toelichting: De inconsistentie kan een teken zijn van een gemeenschappelijk probleem in de implementatie van beide sites of van specifieke beperkingen in de gebruikte screenreader.
+
+Verbetering:
+
+  - Analyseer de broncode van beide sites om te bepalen welke technische aanpak is gebruikt voor de koppen.
+  - Vergelijk de gebruikte ARIA- en HTML5-elementen.
+  - Test met verschillende screenreaders en browsers om te achterhalen of het probleem consistent is.
+
+Algemene aanbevelingen voor verbeteringen:
+
+  - Regelmatige toegankelijkheidstests: Test de site met verschillende screenreaders (bijv. NVDA, JAWS, VoiceOver) en browsers om problemen vroegtijdig te detecteren.
+  - Gebruik van ARIA-attributen: Voeg indien nodig ARIA-labels, aria-hidden of aria-describedby toe om duidelijkere navigatie en voorleesstructuren te bieden.
+  - Semantische HTML: Zorg ervoor dat alle inhoud correct is gestructureerd met semantische HTML-tags.
+  - Gebruikerstests: Betrek gebruikers met een visuele beperking bij het testen om realistische feedback te ontvangen.
+
+Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat leidt tot een betere gebruikservaring voor alle bezoekers, inclusief degenen die afhankelijk zijn van screenreaders.
   
 </details>
 

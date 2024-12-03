@@ -15,20 +15,24 @@
 		<ul class="header-iconen">
 			<!-- Logo -->
 			<li class="logo">
-			  <img src="images/etoslogo.png" alt="Etos Logo">
+				<a href="#">
+					<img src="images/etoslogo.png" alt="Etos Logo">
+				</a>
 			</li>
 	  
 			<!-- Menu knop -->
 			<li class="menu">
-			  <button><img src="images/navigationbar.png" alt="Navigatiebalk"></button>
-			  <p>Menu</p>
+				<a href="#">
+					<button><img src="images/navigationbar.png" alt="Navigatiebalk"></button>
+					<p>Menu</p>
+				</a>
 			</li>
 	  
 			<!-- Iconen -->
 			<li class="icons">
-			  <img src="images/userIcon.png" alt="User Icon">
-			  <img src="images/favoriteIcon.svg" alt="Favorite Icon">
-			  <img src="images/basketIcon.png" alt="Basket Icon">
+				<a href="#"><img src="images/userIcon.png" alt="User Icon"></a>
+				<a href="#" class="whishlist"><img src="images/favoriteIcon.svg" alt="Favorite Icon"><span>0</span></a>
+				<a href="#"><img src="images/basketIcon.png" alt="Basket Icon"></a>
 			</li>
 		  </ul>
 	</header>
@@ -42,7 +46,7 @@
 		<ul>
 		  <li><h2>Categorien</h2></li>
 		  <li><a class="active"><img src="images/folder.g.png" alt="Folder acties"> <span>Folder acties</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/merken.png" alt="Merken"> <span>Merken</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#" class="merken-link"><img src="images/merken.png" alt="Merken"> <span>Merken</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
 		  <li><a href="#"><img src="images/beauty.png" alt="Beauty"> <span>Beauty</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
 		  <li><a href="#"><img src="images/verzorging.png" alt="Verzorging"> <span>Verzorging</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
 		  <li><a href="#"><img src="images/gezondheid.png" alt="Gezondheid"> <span>Gezondheid</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
@@ -60,7 +64,22 @@
 		  <li><a href="service.html"> Service </a></li>
 		  <li><a href="#"> Winkels </a></li>
 		</ul>
+
+		<section class="merken-scherm" aria-hidden="true">
+			<button class="terug-knop"><img src="images/arrow-left.png" alt="Terug"></button>
+			<h2>Merken</h2>
+			<ul>
+				<li><button>Populair</button></li>
+				<li><button>Nieuw</button></li>
+				<li><button>A-G</button></li>
+				<li><button>H-P</button></li>
+				<li><button>Q-Z</button></li>
+			</ul>
+			<button class="alle-merken"><span>Alle Merken</span> <img src="images/right-arrow.png" alt="Verder"></button>
+		</section>
 	  </nav>
+
+	  
 
 	<section class="search-container">
 		<div>
@@ -324,10 +343,10 @@
 
 		<ul class="view-container">
 			<li class="product-soort">
-				<img src="images/favoriteIcon.svg" alt="favorieten">
+				<img src="images/hart.png" alt="favorieten" class="hartje">
 				<img src="images/la-roche-posay-product1.png" alt="la roche posay">
 				<img src="images/derma-care.png" alt="derma-care">
-				<p>100 ML zalf</p>
+				<p>100 ML - zalf</p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
 				<a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100...</a>
 				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(108)</p></span>
@@ -335,35 +354,35 @@
 			</li>
 
 			<li class="product-soort">
-				<img src="images/favoriteIcon.svg" alt="favorieten">
-				<img src="images/la-roche-posay-product1.png" alt="la roche posay">
+				<img src="images/hart.png" alt="favorieten" class="hartje">
+				<img src="images/la-roche-posay-product2.avif" alt="la roche posay">
 				<img src="images/derma-care.png" alt="derma-care">
-				<p>100 ML zalf</p>
+				<p>50 ML - crème </p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
-				<a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100...</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(108)</p></span>
+				<a href="#">La Roche-Posay Anthelios Onzichtbare Fluide</a>
+				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(84)</p></span>
 				<button>Voeg toe +</button>
 			</li>
 
 			<li class="product-soort">
-				<img src="images/favoriteIcon.svg" alt="favorieten">
-				<img src="images/la-roche-posay-product1.png" alt="la roche posay">
+				<img src="images/hart.png" alt="favorieten" class="hartje">
+				<img src="images/ceraVePorudct3.avif" alt="cera ve">
 				<img src="images/derma-care.png" alt="derma-care">
-				<p>100 ML zalf</p>
+				<p>30 ML - serum </p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
-				<a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100...</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(108)</p></span>
+				<a href="#">CeraVe Resurfacing Retinol Serum 30 ML</a>
+				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(46)</p></span>
 				<button>Voeg toe +</button>
 			</li>
 
 			<li class="product-soort">
-				<img src="images/favoriteIcon.svg" alt="favorieten">
-				<img src="images/la-roche-posay-product1.png" alt="la roche posay">
+				<img src="images/hart.png" alt="favorieten" class="hartje">
+				<img src="images/ceraVePorudct4.avif" alt="cera ve">
 				<img src="images/derma-care.png" alt="derma-care">
-				<p>100 ML zalf</p>
+				<p>236 ML - gel</p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
-				<a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100...</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(108)</p></span>
+				<a href="#">CeraVe Anti-Onzuiverheden Reiniger - 236 ML</a>
+				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(18)</p></span>
 				<button>Voeg toe +</button>
 			</li>
 		</ul>
@@ -375,30 +394,32 @@
 			</li>
 		</ul>
 
-		<ul class="grijs-blok-links">
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>520 winkels </b>altijd in de buurt</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Populairste website </b>van het jaar 2023</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Gratis </b>bezorging vanaf 35$</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Gratis </b>retouneren</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Nog meer voordeel </b>met Mijn Etos</a>
-			</li>
-		</ul>
+		
 
 	 </section>
+
+	 <ul class="grijs-blok-links">
+		<li>
+			<img src="images/vink.png" alt="vinkje">
+			<a href="#"><b>520 winkels </b>altijd in de buurt</a>
+		</li>
+		<li>
+			<img src="images/vink.png" alt="vinkje">
+			<a href="#"><b>Populairste website </b>van het jaar 2023</a>
+		</li>
+		<li>
+			<img src="images/vink.png" alt="vinkje">
+			<a href="#"><b>Gratis </b>bezorging vanaf 35$</a>
+		</li>
+		<li>
+			<img src="images/vink.png" alt="vinkje">
+			<a href="#"><b>Gratis </b>retouneren</a>
+		</li>
+		<li>
+			<img src="images/vink.png" alt="vinkje">
+			<a href="#"><b>Nog meer voordeel </b>met Mijn Etos</a>
+		</li>
+	</ul>
 
 	<script src="scripts/script.js"></script>
 </body>
