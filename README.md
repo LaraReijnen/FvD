@@ -66,7 +66,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   bij mij tenminsten, misschien dat hij het normaal wel doet.
   voor de rest is de site wel mooi opgebauwt met code. ze gebruiken heel veel divs.
 
-  ## een paar opmerkingen met de screanreader bij de etos site:
+  ### een paar opmerkingen met de screanreader bij de etos site:
 - Navigatie: Controleer of de website eenvoudig te navigeren is met een toetsenbord en of alle interactieve elementen, zoals knoppen en links, correct worden aangekondigd door de screenreader.
 
 - Afbeeldingen: Zorg ervoor dat alle afbeeldingen voorzien zijn van alternatieve tekstbeschrijvingen (alt-teksten) die door de screenreader worden voorgelezen.
@@ -92,7 +92,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 - Onderhoud regelmatig: Toegankelijkheid is geen eenmalige taak. Controleer bij elke update van de website of de toegankelijkheid behouden blijft.
 Observatie: Niet elk losstaand kopje wordt voorgelezen (Vergelijking met Etos-site)
 
- ## Bevinding: Tijdens het testen van de toegankelijkheid viel op dat de screenreader op de Etos-website niet elk losstaand kopje voorleest. Dit gedrag komt overeen met wat ook op jouw website gebeurt. Je vraagt je af of dit correct is of dat er sprake is van een toegankelijkheidsprobleem.
+ ### Bevinding: Tijdens het testen van de toegankelijkheid viel op dat de screenreader op de Etos-website niet elk losstaand kopje voorleest. Dit gedrag komt overeen met wat ook op jouw website gebeurt. Je vraagt je af of dit correct is of dat er sprake is van een toegankelijkheidsprobleem.
 Wat betekent "losstaand kopje" in dit geval?
 
 Een losstaand kopje verwijst waarschijnlijk naar een koptekst (bijvoorbeeld een H1, H2, H3, etc.) die zelfstandig in de structuur staat zonder directe, visueel gekoppelde inhoud zoals tekst, beschrijvingen of andere elementen. Dit kan bijvoorbeeld gebeuren in een sectie waar een kopje wordt gebruikt als sectie-indicator, maar waar de daadwerkelijke inhoud elders staat of niet gekoppeld is aan dat specifieke kopje.
