@@ -21,6 +21,20 @@ section {
 
 }
 
+/*
+.header-hidden {
+	position: fixed;
+	top: -100px;
+	transition: top 0.3s;
+    width: 100%;
+}
+  
+.header-visible {
+	position: fixed;
+	top: 0;
+    transition: top 0.3s;
+}
+*/
 .header-bestellen {
     display: flex;
     justify-content: center;
@@ -643,15 +657,12 @@ dialog h2 {
     border: 0;
 }
 
-
-
 .product-soort span p {
     font-size: 1em; /* Tekstgrootte aanpassen */
     color: #666;
     margin: 0; /* Geen extra marge rond de tekst */
     line-height: 1.5em; /* Zelfde hoogte als het sterrenafbeelding */
 }
-
 
 /* Toevoegen knop */
 .product-soort button {
@@ -1161,6 +1172,3 @@ footer ul li:first-of-type {
     transform: scale(1.2);
 }
 
-.etos-tekst {
-
-}

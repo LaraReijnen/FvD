@@ -365,15 +365,26 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
   
   vragen over:
-  - waarom op de trending pagina niet ze automatisch naast elkaar komen.
-  - ipv zwart wit modes, of ik een andere modus ervan kan amken zonder de plaatjes aan te hoeven passen.
+  - waarom op de trending pagina de producten niet ze automatisch naast elkaar komen.
+
+  - ipv zwart wit modes, of ik een andere modus ervan kan amken zonder de plaatjes aan te hoeven passen. 
+
+  antwoord: ja maar ht moet wel in de richting maar je hoeft geen plaatjes aan te passen als het te veel moeite is.
   - vragen over de screan reader, hoe je de dubbelen namen weghaald.
-  - vragen over wat ik heb gemist in de vorige les over animeren.
+
+  - vragen over wat ik heb gemist in de vorige les over animeren. 
+  antwoord: je kan het zien op de pwp van de les.
+
   - is de list en grid goed of meoten het plaatjes woorden: ik vind dit voor de screan reader meer overzichtelijk.
-  
+  antwoord: onderbouw gewoon waarom je bepaalde keuzes maakt.
 
 
 
+  ### To Do
+  - animatie maken.
+  - navigatie fixen.
+  - geluid toevoegen, rekening met toegankelijkheid.
+  - spans weghalen en anders stylen in navigatie.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -384,6 +395,8 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  ### vragen
+  - heb ik nu al 5 interacties voor mijn keuze? ik weet het namelijks niet zeker.
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
