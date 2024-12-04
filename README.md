@@ -386,6 +386,8 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   - geluid toevoegen, rekening met toegankelijkheid.
   - spans weghalen en anders stylen in navigatie.
 
+  - seach containr kleur
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 

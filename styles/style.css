@@ -1,7 +1,30 @@
 /* styles/style.css */
+:root {
+    --labels-kleur: #F8C9DD;
+    --background-kleur: #fff;
+    --site-background : #fff;
+    --item-background:#f2f2f2; 
+    --groen-blok: #A7D7C1;
+    --service-blok-groen: #D3EBE0;
+    --letter-kleur: #000000;
+}
+
 body {
     font-family: Arial, sans-serif;
 	margin: 0;
+    background-color: var(--site-background);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --labels-kleur: #a51051;
+        --background-kleur: #ffffff;
+        --site-background : #000000;
+        --item-background:#f2f2f2; 
+        --groen-blok: #21553d;
+        --service-blok-groen: #829089;
+        --letter-kleur: #fff;
+    }
 }
 
 a {
@@ -38,7 +61,7 @@ section {
 .header-bestellen {
     display: flex;
     justify-content: center;
-    background-color: #F8C9DD;
+    background-color: var(--labels-kleur);
     padding: 0;
     font-size: 0.9em;
     height: 2em;
@@ -53,7 +76,7 @@ header img {
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--background-kleur);
     border-bottom: 1px solid #ddd;
 }
 
@@ -115,7 +138,7 @@ header button {
 }
 
 .whishlist span {
-    background-color:#A7D7C1;
+    background-color: var(--groen-blok);
     padding-left: 0.2em;
     padding-right: 0.2em;
     border-radius: 50%;
@@ -133,7 +156,7 @@ nav {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
 	flex-direction: column; 
-	background-color: white; 
+	background-color: var(--background-kleur); 
 	position: fixed; 
 	top: 0px; 
 	bottom: 0px; 
@@ -235,7 +258,7 @@ nav.toonMenu {
     right: -100%; /* Buiten beeld */
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--background-kleur);
     z-index: 3;
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -278,15 +301,15 @@ nav.toonMenu {
 .search-container {
     padding-right: 1.5em !important;
 	display: flex;
-	background-color:#f2f2f2;
+	background-color:var(--item-background);
 	padding: .3em;
 }
 
 .search-container div {
     display: flex;
     align-items: center;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: var(--background-kleur);
+    border: 1px solid var(--item-background);
     border-radius: 25px;
     padding: 8px 15px;
     width: 400px;
@@ -332,7 +355,7 @@ nav.toonMenu {
 	flex-shrink: 0;
 	width: 6rem;
 	height: 4rem;
-	background-color: #fff;
+	background-color: var(--background-kleur);
 	border: 2px solid #ddd;
     padding: 0;
 	border-radius: 0.7em;
@@ -370,7 +393,7 @@ nav.toonMenu {
 	align-items: center;
     border: 0.05em solid #000; 
 	border-radius: 0.7em;
-	background-color: white;
+	background-color: var(--background-kleur);
 	width: 50%;
 	height: 3.5em;
 	padding: 1em;
@@ -394,6 +417,11 @@ nav.toonMenu {
 h1 {
 	display: flex;
 	justify-content: center;
+    color: var(--letter-kleur);
+}
+
+fieldset p, label {
+    color: var(--letter-kleur); 
 }
 
 /*--------------------------------------------------*/
@@ -403,7 +431,7 @@ h1 {
     position: absolute;
     margin-bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: var(--background-kleur);
     height: 700px;
     z-index: 3;
     padding: 1em;
@@ -517,7 +545,7 @@ hr {
     margin-right: 1em; /* Ruimte tussen knop en tekst */
     outline: none; /* Verwijdert de standaard focus */
     cursor: pointer; /* Wijst aan dat dit klikbaar is */
-    background-color: #fff; /* Witte achtergrond */
+    background-color: var(--background-kleur); /* Witte achtergrond */
     transition: background-color 0.3s ease; /* Gladde overgang voor kleur */
 }
 
@@ -569,10 +597,9 @@ dialog h2 {
     display: grid;
     grid-template-rows: 1fr max-content;
     gap: 0.5em;
-    background-color: #f2f2f2;
+    background-color: var(--item-background);
     border-radius: 10px;
     padding: 1em; 
-    width: 40%;
     text-align: left;
 }
 
@@ -671,7 +698,7 @@ dialog h2 {
     justify-self: stretch;
     align-self: center;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--background-kleur);
     border: 1px solid #333;
     border-radius: 5px;
     font-size: 1em;
@@ -696,14 +723,14 @@ fieldset {
 /* Hover effect voor de knop */
 .product-soort button:hover {
     background-color: #333;
-    color: #fff;
+    color: var(--background-kleur);
 }
 
 .greenBlock {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;    /* Centers vertically */
-    background-color: #A7D7C1;
+    background-color: var(--groen-blok);
     padding: 1em;
     width: 90%;
     border-radius: 1em;
@@ -713,7 +740,7 @@ fieldset {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;    /* Centers vertically */
-    background-color: #A7D7C1;
+    background-color: var(--groen-blok);
     border-radius: 1em;
 }
 /*--------------------------------------------------*/
@@ -721,9 +748,8 @@ fieldset {
 /*--------------------------------------------------*/
 .view-container {
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .view-container li {
@@ -732,9 +758,8 @@ fieldset {
 
 
 fieldset:has(input[value="list"]:checked) ~ .view-container {
-    flex-direction: column;
     display: grid;
-    grid-template-rows: 1fr max-content;
+    grid-template-columns: 1fr;
 }
 
 fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort {
@@ -797,7 +822,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 /* grijs-blok-links*/
 /*--------------------------------------------------*/
 .grijs-blok-links {
-    background-color: #f2f2f2;
+    background-color: var(--item-background);
     padding: 1em;
     margin: 0;
     list-style: none;
@@ -832,12 +857,30 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
     margin: 1em;
 }
 /*--------------------------------------------------*/
+/*Lettertype kleuren*/
+/*--------------------------------------------------*/
+.disc summary,
+.disc p,
+.disc li,
+.onderwerpen-op-rij li a p,
+.disc + a,
+.contact-klantenservice,
+.contact-klantenservice a,
+.etos-tekst,
+.section-service > p,
+.links-footer li a,
+footer a/*doet het niet*/
+{
+    color: var(--letter-kleur);
+}
+
+/*--------------------------------------------------*/
 /*helpen*/
 /*--------------------------------------------------*/
 
 .helpen {
 	display: inherit;
-    background-color: #F8C9DD;
+    background-color: var(--labels-kleur);
     padding: 0 !important;
     align-items: baseline;
     padding-top: 1em !important;
@@ -861,7 +904,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 .helpen div {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: var(--background-kleur);
     border: 1px solid #ddd;
     border-radius: 25px;
     padding: 5px 15px;
@@ -889,7 +932,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 /*--------------------------------------------------*/
 
 .links-container {
-    background-color: #A7D7C1;
+    background-color: var(--groen-blok);
     border-radius: 1em;
     padding-top: 1.5em !important;
     padding-bottom: 1.5em !important;
@@ -982,7 +1025,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 .onderwerpen-op-rij div {
     width: 150px;
     height: 150px;
-    background-color: #F8C9DD;
+    background-color: var(--labels-kleur);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1006,7 +1049,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 /*zoek etos winkel blok*/
 /*--------------------------------------------------*/
 .zoek-etos-winkel {
-    background-color: #D3EBE0;
+    background-color: var(--service-blok-groen);
     border-radius: 0.9375em;
     padding: 1.25em;
     max-width: 37.5em;
@@ -1024,7 +1067,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 
 .zoek-etos-winkel .button-zwart {
     background-color: #000;
-    color: #fff;
+    color: var(--background-kleur);
     border: none;
     padding: 0.9em 1.25em;
     border-radius: 0.8em;
@@ -1101,7 +1144,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
     padding: 0.625em 1.25em;
     border: 0.063em solid black;
     border-radius: 0.625em;
-    background-color: white;
+    background-color: var(--background-kleur);
     color: black;
     font-size: 1em;
     font-family: Arial, sans-serif;
@@ -1172,3 +1215,26 @@ footer ul li:first-of-type {
     transform: scale(1.2);
 }
 
+/* animatie */
+@keyframes hartslag-animation {
+    0% { scale:1; }
+    /* eerst een beetje kleiner */
+    5% { scale:.7; }
+    /* en dan pas groter voor extra effect */
+    10% { scale:1.2; }
+    15% { scale:.7; }
+    20% { scale:1.2; }
+    25% { scale:.7; }
+    30% { scale:1; }
+    /* vanaf hier doet de animatie 70% van de tijd 'niets' */
+    /* op die manier zit er een pauze tussen de hartslagen */
+    100% { scale:1; }
+}
+   
+li.product-soort img[aria-label="hartslag"]:hover {
+    animation-name: hartslag-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* Voor smoothness - nb. niet te vaak gebruiken */
+    will-change: transform;
+}
