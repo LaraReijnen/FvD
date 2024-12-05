@@ -381,16 +381,24 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   antwoord: onderbouw gewoon waarom je bepaalde keuzes maakt.
 
   - waar kan je de font vinden van de website?
+  antwoord: NETWORK > alle files die die ophaalt > je ziet ook alle fonts. copy paste in browser.
+
+  - hoeveel microinteracties heb ik,
+  antwoord: met kerst thema, wel een beetje leuk maken > video. of muziekje. heb je echt iets toegevoegd aan de basis.
+
+  - bij de service pagian bewegen de plaatjes niet mee, hoezo doen ze dat niet, want als je het op px zet dan wel alleen worden de plaatjes allemaal een andere groote en het groene blokje daaromheen ook?
+  antwoord: 
 
 
 
   ### To Do
   - animatie maken.
   - navigatie fixen.
+  - header laten plakken en terug komen als ej scrolt.
   - geluid toevoegen, rekening met toegankelijkheid.
   - spans weghalen en anders stylen in navigatie.
+  - kerst thema toevoegen met geluid en kleur en gifs of video's.
 
-  - seach containr kleur
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -408,9 +416,27 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - punt 1
+  trending: lijst van een ding is niet nodig. > het is een p.
+
+  spans weghalen in de nav.
+
+  class = menu de p tag hoort een link te zijn.
+
   - punt 2
-  - nog een punt
-  - ...
+  plaatje vervangen.
+  ligth dark mode 
+  media querie dark mode
+  img{
+    content: url(imgjsjidisdi)
+  } 
+
+  - punt 3
+  plaatjes aanpassen in photoshop, zodat ze evengroot worden.(service pagina groene blokjes)
+  of aspect ratio.
+
+  - punt 4
+  week 2 toegankelijkheid. screanreader website.
+
 
 </details>
 

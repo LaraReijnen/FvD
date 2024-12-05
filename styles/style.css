@@ -968,8 +968,7 @@ footer a/*doet het niet*/
     }
 
     .links-container img {
-        height: 50px;
-        object-fit: cover;
+        height: 5%;
     }
 
     .links-container h2 {
