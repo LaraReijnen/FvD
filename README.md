@@ -366,8 +366,10 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   
   vragen over:
   - waarom op de trending pagina de producten niet ze automatisch naast elkaar komen.
+  antwoord: het moest in een grid collum van de vijver 
 
   - ipv zwart wit modes, of ik een andere modus ervan kan amken zonder de plaatjes aan te hoeven passen. 
+  antwoord: ja dat mag, je hoeft niet je plaatjes aan te passen maar wel laten zien dat je het kan met bijvoorbeeld bij 1 doen.
 
   antwoord: ja maar ht moet wel in de richting maar je hoeft geen plaatjes aan te passen als het te veel moeite is.
   - vragen over de screan reader, hoe je de dubbelen namen weghaald.
@@ -377,6 +379,8 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
 
   - is de list en grid goed of meoten het plaatjes woorden: ik vind dit voor de screan reader meer overzichtelijk.
   antwoord: onderbouw gewoon waarom je bepaalde keuzes maakt.
+
+  - waar kan je de font vinden van de website?
 
 
 
