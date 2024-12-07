@@ -1135,6 +1135,7 @@ footer a,/*doet het niet*/
 .contact-klantenservice p{
     display: flex;
     justify-content: center;
+    align-self: center;
 }
 
 .contact-klantenservice {
@@ -1191,6 +1192,26 @@ footer a,/*doet het niet*/
 /*--------------------------------------------------*/
 /*footer*/
 /*--------------------------------------------------*/
+.uitklap-footer summary {
+    border-bottom: none;
+}
+
+.uitklap-footer summary::after {
+    content: none;
+}
+
+.uitklap-footer ul {
+    padding:0;
+}
+
+.uitklap-footer li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.uitklap-footer a {
+    font-size: 0.8em;
+}
 
 footer {
     display: flex;
