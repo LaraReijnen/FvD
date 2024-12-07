@@ -392,11 +392,12 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
 
 
   ### To Do
-  - animatie maken.
+  - #### animatie maken.
   - navigatie fixen.
   - header laten plakken en terug komen als ej scrolt.
   - geluid toevoegen, rekening met toegankelijkheid.
   - spans weghalen en anders stylen in navigatie.
+  
   - kerst thema toevoegen met geluid en kleur en gifs of video's.
 
 

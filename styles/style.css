@@ -5,8 +5,11 @@
     --site-background : #fff;
     --item-background:#f2f2f2; 
     --groen-blok: #A7D7C1;
+    --blok-pagina-trending: #A7D7C1;
     --service-blok-groen: #D3EBE0;
     --letter-kleur: #000000;
+    --nav-achtergrond: #fff;
+    --product-achtegrond: #f2f2f2; 
 }
 
 body {
@@ -17,15 +20,35 @@ body {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --labels-kleur: #a51051;
-        --background-kleur: #ffffff;
+        --labels-kleur: #93093D;
+        --background-kleur: #FF6798;
         --site-background : #000000;
-        --item-background:#f2f2f2; 
-        --groen-blok: #21553d;
-        --service-blok-groen: #829089;
+        --item-background:#FF6798; 
+        --blok-pagina-trending: #3C2E7B;
+        --groen-blok: #FF6798;
+        --service-blok-groen: #DDDEFD;
         --letter-kleur: #fff;
+        --nav-achtergrond: #DDDEFD;
+        --product-achtegrond: #DDDEFD; 
+    }
+    .grijs-blok-links img {
+        content: url("../images/vink.darkmode.png");
+    }
+
+    .links-footer img {
+        content: url("../images/vink.darkmode.png");
+    }
+
+    footer img:nth-of-type(2) {
+        content: url("../images/icons.footer.dakmode.png");
+    }
+
+    img[alt="mooi van etos"] {
+        content:url("../images/etos.logo.darkmode.png");
     }
 }
+
+
 
 a {
     color: #000;
@@ -44,20 +67,6 @@ section {
 
 }
 
-/*
-.header-hidden {
-	position: fixed;
-	top: -100px;
-	transition: top 0.3s;
-    width: 100%;
-}
-  
-.header-visible {
-	position: fixed;
-	top: 0;
-    transition: top 0.3s;
-}
-*/
 .header-bestellen {
     display: flex;
     justify-content: center;
@@ -76,7 +85,7 @@ header img {
 }
 
 header {
-    background-color: var(--background-kleur);
+    background-color: var(--nav-achtergrond);
     border-bottom: 1px solid #ddd;
 }
 
@@ -308,7 +317,7 @@ nav.toonMenu {
 .search-container div {
     display: flex;
     align-items: center;
-    background-color: var(--background-kleur);
+    background-color: white;
     border: 1px solid var(--item-background);
     border-radius: 25px;
     padding: 8px 15px;
@@ -356,7 +365,7 @@ nav.toonMenu {
 	width: 6rem;
 	height: 4rem;
 	background-color: var(--background-kleur);
-	border: 2px solid #ddd;
+	border: 1px solid var(--letter-kleur);
     padding: 0;
 	border-radius: 0.7em;
 }
@@ -383,7 +392,6 @@ nav.toonMenu {
 	gap: 0.5em;
 }
 
-
 .filter-sorteer img {
 	width: 2em;
 	height: 2em;
@@ -393,14 +401,13 @@ nav.toonMenu {
 	align-items: center;
     border: 0.05em solid #000; 
 	border-radius: 0.7em;
-	background-color: var(--background-kleur);
+	background-color: var(--nav-achtergrond);
 	width: 50%;
 	height: 3.5em;
 	padding: 1em;
 	font-size: 0.7em;
 	font-weight: 100;
 }
-
 
 .filter-sorteer button:nth-of-type(1) {
 	gap:1em;
@@ -597,7 +604,7 @@ dialog h2 {
     display: grid;
     grid-template-rows: 1fr max-content;
     gap: 0.5em;
-    background-color: var(--item-background);
+    background-color: var(--product-achtegrond);
     border-radius: 10px;
     padding: 1em; 
     text-align: left;
@@ -730,7 +737,7 @@ fieldset {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;    /* Centers vertically */
-    background-color: var(--groen-blok);
+    background-color: var(--blok-pagina-trending);
     padding: 1em;
     width: 90%;
     border-radius: 1em;
@@ -740,7 +747,8 @@ fieldset {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;    /* Centers vertically */
-    background-color: var(--groen-blok);
+    background-color: var(--blok-pagina-trendingk);
+    color: var(--letter-kleur);
     border-radius: 1em;
 }
 /*--------------------------------------------------*/
@@ -856,6 +864,17 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
     padding-left: 0 !important;
     margin: 1em;
 }
+
+img[alt="mooi van etos"] {
+    width: 30%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.section-service > h2 {
+    margin-top: 2em;
+}
+
 /*--------------------------------------------------*/
 /*Lettertype kleuren*/
 /*--------------------------------------------------*/
@@ -869,7 +888,8 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 .etos-tekst,
 .section-service > p,
 .links-footer li a,
-footer a/*doet het niet*/
+footer a,/*doet het niet*/
+.section-service > h2
 {
     color: var(--letter-kleur);
 }
@@ -904,7 +924,7 @@ footer a/*doet het niet*/
 .helpen div {
     display: flex;
     align-items: center;
-    background-color: var(--background-kleur);
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 25px;
     padding: 5px 15px;
@@ -944,6 +964,7 @@ footer a/*doet het niet*/
     text-decoration: none;
     color: #000;
 }
+
 .links-container h2 {
     font-size: 1em;
 }
@@ -960,15 +981,26 @@ footer a/*doet het niet*/
 .links-container li:nth-of-type(2){
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items:baseline;
 }
-@media (min-width: 200px) and (max-width: 580px) {
+
+@media (min-width: 200px) and (max-width: 600px) {
     .links-container {
         padding: 5%; /* Verhouding gebaseerd op schermgrootte */
     }
 
     .links-container img {
-        height: 5%;
+        width: 15%;
+    }
+    
+
+    .links-container img[alt="gegevens"],
+    .links-container img[alt="voorkeuren"] {
+        width: 10%;
+    }
+
+    .links-container img[alt="pijl om verder te gaan"] {
+        width: 10%;
     }
 
     .links-container h2 {
@@ -984,8 +1016,9 @@ footer a/*doet het niet*/
     .links-container li:nth-of-type(2) {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
+
 }
 
 .disc ul {
@@ -1066,7 +1099,7 @@ footer a/*doet het niet*/
 
 .zoek-etos-winkel .button-zwart {
     background-color: #000;
-    color: var(--background-kleur);
+    color: var(--letter-kleur);
     border: none;
     padding: 0.9em 1.25em;
     border-radius: 0.8em;
@@ -1237,3 +1270,38 @@ li.product-soort img[aria-label="hartslag"]:hover {
     /* Voor smoothness - nb. niet te vaak gebruiken */
     will-change: transform;
 }
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*KERST STIJL TOEVOEGEN*/
+/*---------------------------------------------------------------------------------------------------------*/
+
+html.kerst {
+    --labels-kleur: #A60B08;
+    --background-kleur: #ae1620;
+    --site-background: #e4e2ce;
+    --item-background: #c4c1a4;
+    --groen-blok: #238d17;
+    --blok-pagina-trending: #308312;
+    --service-blok-groen: #309b33;
+    --letter-kleur: #35291f;
+    --nav-achtergrond: #339111;
+    --product-achtegrond: #c4c1a4;
+}
+
+#myVideo {
+    position: fixed; /* Zorg dat de video vast blijft staan tijdens scrollen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Laat de video de volledige breedte van het scherm bedekken */
+    height: 100%; /* Laat de video de volledige hoogte van het scherm bedekken */
+    object-fit: cover; /* Zorg dat de video zich aanpast aan de container zonder vervormd te raken */
+    z-index: -1; /* Plaats de video achter andere elementen */
+}
+
+body.kerst {
+    background-image: url('../video/video-kerst.mp4');
+    background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+    background-repeat: no-repeat; /* Voorkomt herhaling van de afbeelding */
+    background-position: center; /* Centraal uitlijnen van de afbeelding */
+}
+

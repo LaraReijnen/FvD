@@ -23,6 +23,46 @@ const terugKnop = document.querySelector('.terug-knop');
 //whishlist
 const whishlist = document.querySelector('.whishlist span')
 
+//video
+const bgVideo = document.querySelector('.bgVideo');
+
+
+
+document.getElementById('kerst-toggle').addEventListener('change', function () {
+  const video = document.getElementById('myVideo');
+  const audio = new Audio('geluid/geluid-kerst.mp3');// Selecteer het audio-element
+
+  if (this.checked) {
+      console.log('Kerst thema actief');
+      document.documentElement.classList.add('kerst');
+      bgVideo.classList.remove('hide'); // Laat de video zien
+      video.play();
+      audio.play(); // Start het geluid
+
+      // Zet een timeout om de video en audio na 15 seconden te stoppen
+      setTimeout(() => {
+          video.pause(); // Stop de video
+          video.currentTime = 0; // Reset naar het begin
+          bgVideo.classList.add('hide'); // Verberg de video
+
+          audio.pause(); // Stop het geluid
+          audio.currentTime = 0; // Reset audio naar het begin
+          console.log('Video en geluid zijn gestopt en verborgen na 15 seconden');
+      }, 15000); // 15 seconden (15000 milliseconden)
+  } else {
+      console.log('Kerst thema uitgeschakeld');
+      document.documentElement.classList.remove('kerst');
+      bgVideo.classList.add('hide'); // Verberg de video
+      video.pause(); // Stop de video
+      video.currentTime = 0; // Reset naar het begin
+      audio.pause(); // Stop het geluid
+      audio.currentTime = 0; // Reset audio naar het begin
+  }
+});
+
+
+
+
 //let
 let whislistNumbers = 0;
 
