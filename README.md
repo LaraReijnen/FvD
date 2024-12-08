@@ -400,16 +400,6 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   
   - kerst thema toevoegen met geluid en kleur en gifs of video's.
 
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
   ### vragen
   - heb ik nu al 5 interacties voor mijn keuze? ik weet het namelijks niet zeker.
 
@@ -457,11 +447,52 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
+  - Verbetering van navigatie en interacties:
+Ik heb geleerd hoe ik een duidelijke en toegankelijke navigatie kan maken met behulp van HTML5-elementen zoals `<nav>` en `<ul>`. Ook heb ik door de werkgroepen goed kunnen begrijpen hoe ik mijn hamburger-menu werkend kon maken met JavaScript.
+
+  - Gebruik van nieuwe technieken:
+Ik heb flink geoefend met Flexbox, Grid en JavaScript. Dit heeft geholpen bij het maken van onderdelen zoals de slideshow en het sorteerknopje. Door de oefeningen ging het steeds beter, en nu begrijp ik hoe ik deze technieken kan toepassen.
+
+  - Toegankelijkheidstests: 
+Het testen van mijn website met screenreaders gaf me veel inzicht. Ik kwam er bijvoorbeeld achter dat dubbele voorlezingen van alt-teksten kunnen voorkomen als ik beter op de structuur en ARIA-attributen let. Het was interessant om te zien hoe een screenreader mijn site gebruikt.
+
+  - Layout en responsiviteit:
+Ik heb geleerd hoe ik problemen met vaste widths kan oplossen, zodat mijn website goed meebeweegt op verschillende schermgroottes. Door Grid te gebruiken, heb ik de layout flexibel kunnen maken. bijvoorbeeld bij de layout van de producten op mijn pagina, door middel van grid en has:.
+
+  - Interactieve kerstknop:
+Het maken van een interactieve kerstknop was een leuk. Als je erop klikt, speelt twee soorten video's en geluiden af en komt de hele pagina in kerstsfeer. Dit gaf me de kans om meer te leren over het gebruik van JavaScript en hoe je een website echt interactief en leuk kunt maken.
+
+  - Feedback verwerken: 
+Tijdens meetings en werkgroepen kreeg ik goede feedback die ik direct kon toepassen. Bijvoorbeeld het toevoegen van hover-effecten op links of het verbeteren van de structuur van mijn productpagina’s. Dit hielp om mijn website beter en netter te maken.
+
+
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  ### Dit was lastig/Is niet gelukt:
+
+  - Screenreader gebruiken:  
+Het werken met een screenreader vond ik moeilijk in het begin. Ik wist niet goed hoe ik deze moest bedienen en hoe ik de resultaten moest interpreteren. Hierdoor was het lastig om te bepalen of problemen bij mijn code lagen of aan hoe ik de tool gebruikte.
+
+  - Responsive gedrag van de website:
+Het aanpassen van de productweergave zodat deze goed meebeweegt met verschillende schermgroottes was een uitdaging. Ik ontdekte dat een vaste width de layout blokkeerde, maar het duurde even voordat ik doorhad hoe ik dit kon oplossen met Grid.
+
+  - Dialog en sorteerknop:  
+Het omzetten van een sorteerknop van een simpele lijst naar een dialog met een form was lastig. Dit concept was nieuw voor mij, en het kostte wat tijd voordat ik het doorhad. Uiteindelijk werkte het.
+
+  - Kerstknop ontwikkelen:
+Het toevoegen van geluiden, video's en sfeerelementen voor de kerstknop was technisch gezien uitdagend. Vooral het goed synchroniseren van alle onderdelen, zoals video's en geluid, en zorgen dat het niet te overweldigend werd, kostte wat moeite want de filmpjes moesten elkaar niet overlappen.
+
+  - Styling consistent krijgen: 
+Ik had moeite met het consistent stylen van bepaalde onderdelen, zoals de sorteerknop en het hamburger-menu. Het kostte veel tijd om de vormgeving zo te krijgen dat het goed past bij de rest van de website.
+
+  - Beelden en groottes aanpassen:
+De plaatjes op de servicepagina bewogen niet goed mee met de rest van de layout. Als ik ze responsive maakte, werden de groene blokjes eromheen ongelijk. Dit is iets waar ik nog aan meost werken, bijvoorbeeld door gebruik te maken van aspect ratio's, maar uitiendelijk vond ik het makkelijker om de plaatjes groote aantepassen, dat de witruimte even groot is.
+
+  - Kleine technische details:
+Sommige kleine details, zoals dubbele voorlezingen in de screenreader of elementen die niet netjes werden voorgelezen, bleven lastig op te lossen. Het begrijpen van ARIA-attributen en hoe screenreaders hierop reageren, vraagt nog om meer oefening, maar ik heb geprobeerd om alles zo goed werkend te maken.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
@@ -480,6 +511,11 @@ Met deze aanpassingen kan de toegankelijkheid aanzienlijk worden verbeterd, wat 
   Nb. Vermeld de bronnen ook in je code.
 
   1. bron 1
+  <img src="readme-images/screanshot-chatgpt.png" width="375px" alt="error">
+  zoals je op het plaatje ziet kon ik niet de link delen omdat er een screanshot in de chat stond, dus hier een screanshot van wat ik kreeg van chatGPT en mijn 
+  mijn prompt: ""het gaat om de video, ik wil hem alten afspelen als er op het kerstthema word geklikt, net zoals de kleur van de root verander. maar dan wil ik ook erbij dat dat filmpje afspeeld en dat ej he ook uit kan zetten als je op de knop drukt dat het uit gaat. waarom werkt mijn code nu niet?'"
+  de screanshot van de code die ik van chat gpt kreeg:
+  <img src="readme-images/screanshot-chatgpt2.png" width="375px" alt="chatGPT code">
   2. bron 2
   3. ...
 

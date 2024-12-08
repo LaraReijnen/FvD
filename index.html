@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<header class="header-visible">
+	<header>
 		<ul class="header-bestellen">
-			<li><p>Voor 22:00 uur besteld, binnen 1-3 werkdagen in huis</p></li>
+			<li>
+				<p>Voor 22:00 uur besteld, binnen 1-3 werkdagen in huis</p>
+			</li>
 		</ul>
 		
 		<ul class="header-iconen">
@@ -31,52 +33,65 @@
 			<!-- Iconen -->
 			<li class="icons">
 				<a href="#"><img src="images/userIcon.png" alt="User Icon"></a>
-				<a href="#" class="whishlist"><img src="images/favoriteIcon.svg" alt="Favorite Icon"><span>0</span></a>
+				<a href="#" class="wishlist">
+					<img src="images/favoriteIcon.svg" alt="Favorite Icon">
+					<span>0</span>
+				</a>
 				<a href="#"><img src="images/basketIcon.png" alt="Basket Icon"></a>
 			</li>
-		  </ul>
+		</ul>
 	</header>
-  
+	
 	<nav class="">
 		<!-- De sluit button -->
 		<button aria-hidden="true">
 		  <img src="/images/close.png" alt="Sluit knop">
 		</button>
 		
-		<ul>
+		<ul class="categorienImg">
 		  <li><h2>Categorien</h2></li>
-		  <li><a class="active"><img src="images/folder.g.png" alt="Folder acties"><span>Folder acties</span><img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#" class="merken-link"><img src="images/merken.png" alt="Merken"> <span>Merken</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/beauty.png" alt="Beauty"> <span>Beauty</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/verzorging.png" alt="Verzorging"> <span>Verzorging</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/gezondheid.png" alt="Gezondheid"> <span>Gezondheid</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/zwanger-baby-kind.png" alt="Zwanger, Baby en Kind"> <span>Zwanger, Baby en Kind</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/thuis-en-op-rijs.png" alt="Thuis & op reis"> <span>Thuis & op reis</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/cadeaus.png" alt="Cadeaus"> <span>Cadeaus</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="index.html"><img src="images/trending.png" alt="Trending"> <span>Trending</span> </a></li>
-		  <li><a href="#"><img src="images/eerder-gekocht.png" alt="Eerder gekocht"> <span>Eerder gekocht</span> </a></li>
+		  <li><a class="active"><img src="images/folder.g.png" alt=""><span>Folder acties</span><img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#" class="merken-link"><img src="images/merken.png" alt=""> <span>Merken</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/beauty.png" alt=""> <span>Beauty</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/verzorging.png" alt=""> <span>Verzorging</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/gezondheid.png" alt=""> <span>Gezondheid</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/zwanger-baby-kind.png" alt=""> <span>Zwanger, Baby en Kind</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/thuis-en-op-rijs.png" alt=""> <span>Thuis & op reis</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="#"><img src="images/cadeaus.png" alt=""> <span>Cadeaus</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
+		  <li><a href="index.html"><img src="images/trending.png" alt=""> <span>Trending</span> </a></li>
+		  <li><a href="#"><img src="images/eerder-gekocht.png" alt=""> <span>Eerder gekocht</span> </a></li>
 		  <li><h2>Account</h2></li>
 		  <hr>
-		  <li><a href="#"><img src="images/inloggen.png" alt="Inloggen"> <span>Inloggen</span> </a></li>
+		  <li><a href="#"><img src="images/inloggen.png" alt=""> <span>Inloggen</span> </a></li>
 		  <hr>
-		  <li><a href="#"><img src="images/voordeel.png" alt="Voordeel"> <span>Voordeel met mijn etos</span> </a></li>
+		  <li><a href="#"><img src="images/voordeel.png" alt=""> <span>Voordeel met mijn etos</span> </a></li>
 		  <hr>
 		  <li><a href="service.html"> Service </a></li>
 		  <li><a href="#"> Winkels </a></li>
 		</ul>
 
 		<section class="merken-scherm" aria-hidden="true">
-			<button class="terug-knop"><img src="images/arrow-left.png" alt="Terug"></button>
-			<h2>Merken</h2>
+			<div class="headerMerken">
+			<button class="terug-knop"><img src="images/right-arrow.png" alt="Terug"></button>
+			<button class="btnMerken" aria-hidden="true">
+				<img src="/images/close.png" alt="Sluit knop">
+			  </button>
+			</div>
+			  <h2>Merken</h2>
 			<ul>
-				<li><button>Populair</button></li>
-				<li><button>Nieuw</button></li>
-				<li><button>A-G</button></li>
-				<li><button>H-P</button></li>
-				<li><button>Q-Z</button></li>
+				<li><button>Populair</button><img class="imgMerk" src="images/right-arrow.png" alt="Verder"></li>
+				<li><button>Nieuw</button><img class="imgMerk" src="images/right-arrow.png" alt="Verder"></li>
+				<li><button>A-G</button><img class="imgMerk" src="images/right-arrow.png" alt="Verder"></li>
+				<li><button>H-P</button><img class="imgMerk" src="images/right-arrow.png" alt="Verder"></li>
+				<li><button>Q-Z</button><img class="imgMerk" src="images/right-arrow.png" alt="Verder"></li>
 			</ul>
-			<button class="alle-merken"><span>Alle Merken</span> <img src="images/right-arrow.png" alt="Verder"></button>
-		</section>
+			<div class="alle-merken-container">
+				<button class="alle-merken">
+					<span>Alle Merken</span>
+					<img src="images/right-arrow.png" alt="Verder">
+				</button>
+			</div>
+					</section>
 	  </nav>
 
 	  
@@ -110,7 +125,12 @@
 			<audio id="kerst-audio">
 				<source src="geluid/geluid-kerst.mp3" type="audio/mp3">
 			</audio>
+		</div> 
+
+		<div class="kerst-slinger hide">
+			<img src="images/kerst.slinger.png" alt="kerst slinger">
 		</div>
+		
 
 		<h1>Trending</h1>
 		<ul class="scrolbar-container">

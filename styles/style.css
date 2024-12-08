@@ -1,4 +1,14 @@
 /* styles/style.css */
+@font-face{
+    src: url('../fonts/IvarDisplay-SemiBold\(2\).woff2') format('woff2');
+    font-family: hoofd;
+}
+
+@font-face{
+    src: url('../fonts/Apercu-Regular-Pro\(1\).woff2') format('woff2');
+    font-family: normaal;
+}
+/* styles/style.css */
 :root {
     --labels-kleur: #F8C9DD;
     --background-kleur: #fff;
@@ -203,8 +213,7 @@ nav.toonMenu {
 	padding-left: 5em;
 }
 
-.toonMenu img:first-of-type {
-	background-color: #fbdbe9;
+.categorienImg img:first-of-type {
 	width: 2em !important;
 	border-radius: 10em;
 	padding: 0.5em
@@ -219,6 +228,7 @@ nav.toonMenu {
     border: 0;
     margin: 0;
     padding-right: 1em !important;
+    padding-top: 1em !important;
     align-self: end;
     padding: 0;
     height: 2em;
@@ -262,12 +272,13 @@ nav.toonMenu {
 /*MERKEN NAV*/
 /*--------------------------------------------------*/
 .merken-scherm {
+    padding-top: 1em;
     position: fixed;
     top: 0;
     right: -100%; /* Buiten beeld */
     width: 100%;
     height: 100%;
-    background-color: var(--background-kleur);
+    background-color: #fff;
     z-index: 3;
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -284,24 +295,168 @@ nav.toonMenu {
     cursor: pointer;
 }
 
-.terug-knop {
-    position: absolute;
-    top: 1em;
-    left: 1em;
+
+.merken-scherm h2 {
+    padding-left: 32px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-family: IvarDisplay, Georgia, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.alle-merken {
-    position: absolute;
-    bottom: 1em;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background-color: #f8c9dd;
-    border: none;
-    font-size: 1em;
+.terug-knop {
+    padding-left: 2.5em !important;
+
 }
+
+.headerMerken {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding-bottom: 2em !important;
+}
+
+html.no-scroll, body.no-scroll {
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.merken-scherm img {
+    background-color: transparent !important;
+}
+
+/* Container for "Alle Merken" button */
+.alle-merken-container {
+    position: absolute; /* Position relative to the .merken-scherm */
+    bottom: 0; /* Place it at the bottom of the container */
+    width: 100%; /* Make it span the full width */
+    background-color: pink; /* Pink background for the entire row */
+    text-align: right; /* Align button content to the right */
+    padding: 0.5em 1em; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Style the "Alle Merken" button */
+.alle-merken {
+    background: none; /* Remove default button styling */
+    border: none;
+    color: #000; /* Text color */
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex; /* Align text and image */
+    align-items: center;
+    gap: 0.5em; /* Space between text and image */
+}
+
+
+
+.merken-scherm ul {
+    list-style: none; /* Remove default list styles */
+    padding-left: 1em !important;
+    margin: 0;
+}
+
+.merken-scherm ul li {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between text and image */
+    padding-left: 1em;
+}
+
+.merken-scherm ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size if needed */
+}
+
+.imgMerk {
+    margin-left: auto; /* Push the image to the right */
+    width: 1em; /* Adjust the image width */
+    height: 1em; /* Adjust the image height */
+}
+
+
+
+
+/*--------------------------------------------------*/
+/*mERK*/
+/*--------------------------------------------------*/
+
+
+
+/* Shared styles for all schermen */
+.populair-scherm,
+.nieuw-scherm,
+.a-g-scherm,
+.h-p-scherm,
+.q-z-scherm {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Buiten beeld */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 3;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    transform: translateX(0);
+}
+
+.populair-scherm.toon,
+.nieuw-scherm.toon,
+.a-g-scherm.toon,
+.h-p-scherm.toon,
+.q-z-scherm.toon {
+    transform: translateX(-100%); /* Naar binnen schuiven */
+}
+
+.populair-scherm button,
+.nieuw-scherm button,
+.a-g-scherm button,
+.h-p-scherm button,
+.q-z-scherm button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.populair-scherm ul,
+.nieuw-scherm ul,
+.a-g-scherm ul,
+.h-p-scherm ul,
+.q-z-scherm ul {
+    padding-left: 32px;
+}
+
+.populair-scherm h2,
+.nieuw-scherm h2,
+.a-g-scherm h2,
+.h-p-scherm h2,
+.q-z-scherm h2 {
+    padding-top: 1em;
+    padding-left: 32px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-family: IvarDisplay, Georgia, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.populair-scherm > button.terug-knop,
+.nieuw-scherm > button.terug-knop,
+.a-g-scherm > button.terug-knop,
+.h-p-scherm > button.terug-knop,
+.q-z-scherm > button.terug-knop {
+    padding-left: 32px;
+}
+
+.populair-scherm img,
+.nieuw-scherm img,
+.a-g-scherm img,
+.h-p-scherm img,
+.q-z-scherm img {
+    transform: rotateY(180deg);
+    background-color: transparent !important;
+}
+
 
 /*--------------------------------------------------*/
 /*SEARCH BAR*/
@@ -390,6 +545,9 @@ nav.toonMenu {
 	margin-right: 1em;
     padding: 0;
 	gap: 0.5em;
+    position: sticky;
+    top: 0;
+    padding: 0px 10px 16px 0px;
 }
 
 .filter-sorteer img {
@@ -1099,7 +1257,7 @@ footer a,/*doet het niet*/
 
 .zoek-etos-winkel .button-zwart {
     background-color: #000;
-    color: var(--letter-kleur);
+    color: white;
     border: none;
     padding: 0.9em 1.25em;
     border-radius: 0.8em;
@@ -1211,6 +1369,7 @@ footer a,/*doet het niet*/
 
 .uitklap-footer a {
     font-size: 0.8em;
+    font-weight: bold;
 }
 
 footer {
@@ -1339,4 +1498,12 @@ body.kerst {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.kerst-slinger img {
+    width: 100%;
+}
+
+.kerst-slinger {
+    margin-right: 1em;
 }
