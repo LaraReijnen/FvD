@@ -221,6 +221,11 @@ nav.toonMenu {
 
 .toonMenu img:last-of-type {
 	width: 1em;	
+}
+
+.rightArrow {
+    position: fixed; /* Keeps the image in the same place, even on scroll */
+    right: 0; /* Aligns the image to the right edge */
     padding-right: 5%;
 }
 
