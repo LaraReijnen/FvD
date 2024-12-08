@@ -6,170 +6,138 @@ const navMenu = document.querySelector('nav');
 const searchBar = document.querySelector('.search-container');
 
 // Selectie van elementen voor het filtreer en sorteer-menu
-const tweedeButton = document.querySelector('.filter-sorteer button:nth-of-type(2)'); 
-const eertseButton = document.querySelector('.filter-sorteer button:nth-of-type(1)'); 
+const tweedeButton = document.querySelector('.filter-sorteer button:nth-of-type(2)');
+const eertseButton = document.querySelector('.filter-sorteer button:nth-of-type(1)');
 const sorteerMenu = document.querySelector('.filter-sorteer-menu');
 const filtreerMenu = document.querySelector('.sorteer-menu');
 const sorteerCloseButton = document.querySelector('.filter-sorteer-menu button');
 
-// Hartjes
+// Hartjes (Favorites)
 const allHearts = document.querySelectorAll('.hartje');
-// Selectie van elementen
-const merkenLink = document.querySelector('.merken-link');
-const merkenScherm = document.querySelector('.merken-scherm');
-const sluitKnop = document.querySelector('nav button');
-const terugKnop = document.querySelector('.terug-knop');
+let wishlistCount = 0;
+const wishlist = document.querySelector('.wishlist span');
 
-//whishlist
-const whishlist = document.querySelector('.whishlist span');
-
-// Video elements
+// Video Elements
 const bgVideo = document.querySelector('.bgVideo');
 const startVideo = document.getElementById('startVideo');
 const myVideo = document.getElementById('myVideo');
 const kerstSlinger = document.querySelector('.kerst-slinger');
 
-
-// Startvideo appears first, then transitions to bgVideo
+// Christmas Toggle
 document.getElementById('kerst-toggle').addEventListener('change', function () {
-  const startVideo = document.getElementById('startVideo');
-  const bgVideo = document.getElementById('myVideo');
+  const audio = new Audio('geluid/geluid-kerst.mp3');
 
-  // Play the start video
-  startVideo.play();
-  startVideo.style.zIndex = '100'; // Ensure it's on top
-  startVideo.style.display = 'block'; // Ensure it is visible
+  if (this.checked) {
+    console.log('Kerst thema actief');
+    document.documentElement.classList.add('kerst');
+    bgVideo.classList.remove('hide');
+    kerstSlinger.classList.remove('hide');
 
-  // Play the background video, but keep it hidden initially
-  bgVideo.style.display = 'none'; // Hide initially
+    myVideo.pause();
+    myVideo.currentTime = 0;
+    myVideo.play();
+    audio.play();
 
-  // After 3 seconds, hide the start video and reveal the background video
-  setTimeout(() => {
-      startVideo.pause(); // Stop the start video
-      startVideo.style.display = 'none'; // Hide the start video
-      bgVideo.play(); // Preload the background video
-      bgVideo.style.display = 'block'; // Show the background video
-      bgVideo.style.zIndex = '-1'; // Ensure it's in the background
-  }, 3000); // Wait 3 seconds before switching
-});
-
-
-document.getElementById('kerst-toggle').addEventListener('change', function () {
-    const video = document.getElementById('myVideo');
-    const audio = new Audio('geluid/geluid-kerst.mp3');
-
-    if (this.checked) {
-      console.log('Kerst thema actief');
-      document.documentElement.classList.add('kerst');
-      bgVideo.classList.remove('hide'); // Laat de video zien
-      kerstSlinger.classList.remove('hide');
-      video.play();
-      audio.play();
-
-      setTimeout(() => {
-        video.pause();
-        video.currentTime = 0;
-        bgVideo.classList.add('hide'); // Verberg de video
-        kerstSlinger.classList.ass('hide');
-
-        audio.pause();
-        audio.currentTime = 0;
-        console.log('Video en geluid zijn gestopt en verborgen na 15 seconden');
-      }, 15000); // 15 seconden
-    } else {
-      console.log('Kerst thema uitgeschakeld');
-      document.documentElement.classList.remove('kerst');
+    setTimeout(() => {
+      myVideo.pause();
+      myVideo.currentTime = 0;
       bgVideo.classList.add('hide');
-      video.pause();
-      video.currentTime = 0;
       audio.pause();
       audio.currentTime = 0;
-    }
-  });
+      console.log('Video en geluid zijn gestopt en verborgen na 5 seconden.');
+    }, 5000);
+  } else {
+    console.log('Kerst thema uitgeschakeld');
+    document.documentElement.classList.remove('kerst');
+    bgVideo.classList.add('hide');
+    kerstSlinger.classList.add('hide');
 
-//let
-let whislistNumbers = 0;
+    myVideo.pause();
+    myVideo.currentTime = 0;
+    audio.pause();
+    audio.currentTime = 0;
+  }
+});
 
-// Sluiten van het navigatiemenu
-menuButton.addEventListener('click', toonMenu);
-closeButton.addEventListener('click', sluitMenu);
+// Navigation Menu
+menuButton.addEventListener('click', () => {
+  navMenu.classList.add('toonMenu');
+  searchBar.classList.add('hide');
+});
 
-// Het sorteer-menu
-tweedeButton.addEventListener('click', toonSorteerMenu);
+closeButton.addEventListener('click', () => {
+  navMenu.classList.remove('toonMenu');
+  searchBar.classList.remove('hide');
+});
 
-// Openen en sluiten van het filtreer-menu
-eertseButton.addEventListener('click', toonFiltreerMenu);
-
-// Eventlisteners voor hartjes (favorieten toggelen)
+// Wishlist (Heart Toggle)
 allHearts.forEach(heart => {
   heart.addEventListener('click', function () {
     if (this.src.includes("hart-rood_1.png")) {
-      whislistNumbers -= 1;
-      console.log(whislistNumbers);
-      whishlist.innerHTML = whislistNumbers;
       this.src = "images/hart.png";
+      wishlistCount--;
     } else {
-      whislistNumbers += 1;
-      console.log(whislistNumbers);
-      whishlist.innerHTML = whislistNumbers;
       this.src = "images/hart-rood_1.png";
+      wishlistCount++;
+    }
+    wishlist.textContent = wishlistCount;
+  });
+});
+
+// Open "Merken" Screen
+const merkenLink = document.querySelector('.merken-link');
+const merkenScherm = document.querySelector('.merken-scherm');
+merkenLink.addEventListener('click', () => {
+  merkenScherm.classList.add('toon');
+  navMenu.classList.remove('toonMenu');
+  searchBar.classList.add('hide');
+});
+
+// Close "Merken" Screen
+const terugKnop = document.querySelector('.terug-knop');
+terugKnop.addEventListener('click', () => {
+  merkenScherm.classList.remove('toon');
+  navMenu.classList.add('toonMenu');
+  searchBar.classList.remove('hide');
+});
+
+// Filter and Sort Menu
+eertseButton.addEventListener('click', () => {
+  filtreerMenu.showModal();
+});
+
+tweedeButton.addEventListener('click', () => {
+  sorteerMenu.showModal();
+});
+
+sorteerCloseButton.addEventListener('click', () => {
+  sorteerMenu.close();
+});
+
+// Dropdowns (Filter/Sort Details)
+document.querySelectorAll('details').forEach(detail => {
+  detail.addEventListener('toggle', function () {
+    if (this.open) {
+      // Close all other dropdowns when one is opened
+      document.querySelectorAll('details').forEach(otherDetail => {
+        if (otherDetail !== this && otherDetail.open) {
+          otherDetail.open = false;
+        }
+      });
     }
   });
 });
 
-// Eventlistener voor het tonen van het merken scherm
-merkenLink.addEventListener('click', toonMerkenScherm);
+// Handle Filter Modal Closing
+document.querySelector('.filter-sorteer-menu button').addEventListener('click', () => {
+  sorteerMenu.close();
+});
 
-// Eventlistener voor het sluiten van het merken scherm
-terugKnop.addEventListener('click', sluitMerkenScherm);
-
-// Eventlistener voor het sluiten van de navigatie
-sluitKnop.addEventListener('click', sluitNavigatie);
-
-// Eventlistener voor het btnMerken
+// Handle "btnMerken" Click
 if (btnMerken) {
   btnMerken.addEventListener('click', () => {
-    sluitMerkenScherm();
-    sluitMenu();
+    merkenScherm.classList.remove('toon');
+    navMenu.classList.remove('toonMenu');
+    searchBar.classList.remove('hide');
   });
-}
-
-// Functie om het navigatiemenu te tonen
-function toonMenu() {
-  navMenu.classList.add('toonMenu');
-  searchBar.classList.add('hide');
-}
-
-// Functie om het navigatiemenu te sluiten
-function sluitMenu() {
-  navMenu.classList.remove('toonMenu');
-  searchBar.classList.remove('hide');
-}
-
-// Functie om het sorteer-menu te tonen
-function toonSorteerMenu() {
-  sorteerMenu.showModal();
-}
-
-// Functie om het filtreer-menu te tonen
-function toonFiltreerMenu() {
-  filtreerMenu.showModal();
-}
-
-// Functie om het merken scherm te tonen
-function toonMerkenScherm() {
-  merkenScherm.classList.add('toon');
-  toonMenu.classList.add('hide');
-  toonMenu.classList.remove('toon');
-}
-
-// Functie om het merken scherm te sluiten
-function sluitMerkenScherm() {
-  merkenScherm.classList.remove('toon');
-  toonMenu.classList.add('hide');
-}
-
-// Functie om de navigatie te sluiten
-function sluitNavigatie() {
-  document.querySelector('nav').classList.remove('toonMenu');
-}
+};
