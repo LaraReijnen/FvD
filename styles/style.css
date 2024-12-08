@@ -1518,3 +1518,15 @@ body.kerst {
 .kerst-slinger {
     margin-right: 1em;
 }
+
+.zindex100 {
+    z-index: 100;
+}
+
+.zindex-1 {
+    z-index: -1;
+}
+
+.displayBlock {
+    display: block;
+}

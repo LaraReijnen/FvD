@@ -23,42 +23,63 @@ const startVideo = document.getElementById('startVideo');
 const myVideo = document.getElementById('myVideo');
 const kerstSlinger = document.querySelector('.kerst-slinger');
 
-// Christmas Toggle
+// Startvideo appears first, then transitions to bgVideo
 document.getElementById('kerst-toggle').addEventListener('change', function () {
-  const audio = new Audio('geluid/geluid-kerst.mp3');
+  const startVideo = document.getElementById('startVideo');
+  const bgVideo = document.getElementById('myVideo');
 
-  if (this.checked) {
-    console.log('Kerst thema actief');
-    document.documentElement.classList.add('kerst');
-    bgVideo.classList.remove('hide');
-    kerstSlinger.classList.remove('hide');
+  // Play the start video
+  startVideo.play();
+  startVideo.style.zIndex = '100'; // Ensure it's on top
+  startVideo.style.display = 'block'; // Ensure it is visible
 
-    myVideo.pause();
-    myVideo.currentTime = 0;
-    myVideo.play();
-    audio.play();
+  // Play the background video, but keep it hidden initially
+  bgVideo.style.display = 'none'; // Hide initially
 
-    setTimeout(() => {
-      myVideo.pause();
-      myVideo.currentTime = 0;
-      bgVideo.classList.add('hide');
-      audio.pause();
-      audio.currentTime = 0;
-      console.log('Video en geluid zijn gestopt en verborgen na 5 seconden.');
-    }, 5000);
-  } else {
-    console.log('Kerst thema uitgeschakeld');
-    document.documentElement.classList.remove('kerst');
-    bgVideo.classList.add('hide');
-    kerstSlinger.classList.add('hide');
-
-    myVideo.pause();
-    myVideo.currentTime = 0;
-    audio.pause();
-    audio.currentTime = 0;
-  }
+  // After 3 seconds, hide the start video and reveal the background video
+  setTimeout(() => {
+      startVideo.pause(); // Stop the start video
+      startVideo.style.display = 'none'; // Hide the start video
+      bgVideo.play(); // Preload the background video
+      bgVideo.style.display = 'block'; // Show the background video
+      bgVideo.style.zIndex = '-1'; // Ensure it's in the background
+  }, 3000); // Wait 3 seconds before switching
 });
 
+
+document.getElementById('kerst-toggle').addEventListener('change', function () {
+    const video = document.getElementById('myVideo');
+    const audio = new Audio('geluid/geluid-kerst.mp3');
+
+    if (this.checked) {
+      console.log('Kerst thema actief');
+      document.documentElement.classList.add('kerst');
+      bgVideo.classList.remove('hide'); // Laat de video zien
+      kerstSlinger.classList.remove('hide');
+      video.play();
+      audio.play();
+
+      setTimeout(() => {
+        video.pause();
+        video.currentTime = 0;
+        bgVideo.classList.add('hide'); // Verberg de video
+
+        audio.pause();
+        audio.currentTime = 0;
+        console.log('Video en geluid zijn gestopt en verborgen na 15 seconden');
+      }, 15000); // 15 seconden
+    } else {
+      console.log('Kerst thema uitgeschakeld');
+      document.documentElement.classList.remove('kerst');
+      bgVideo.classList.add('hide');
+      kerstSlinger.classList.add('hide');
+      video.pause();
+      video.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+  
 // Navigation Menu
 menuButton.addEventListener('click', () => {
   navMenu.classList.add('toonMenu');
