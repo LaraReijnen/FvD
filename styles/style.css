@@ -295,12 +295,15 @@ nav.toonMenu {
     cursor: pointer;
 }
 
-
 .merken-scherm h2 {
     padding-left: 32px;
     font-size: 1.5rem;
     line-height: 1.3;
     font-family: IvarDisplay, Georgia, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.merken-scherm img {
+    width: 1em;
 }
 
 .terug-knop {
@@ -319,6 +322,9 @@ html.no-scroll, body.no-scroll {
     position: relative;
 }
 
+.show {
+    display: block;
+}
 
 .merken-scherm img {
     background-color: transparent !important;
@@ -369,11 +375,7 @@ html.no-scroll, body.no-scroll {
     font-size: 1rem; /* Adjust font size if needed */
 }
 
-.imgMerk {
-    margin-left: auto; /* Push the image to the right */
-    width: 1em; /* Adjust the image width */
-    height: 1em; /* Adjust the image height */
-}
+
 
 
 
