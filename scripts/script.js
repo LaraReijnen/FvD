@@ -6,7 +6,7 @@ const navMenu = document.querySelector('nav');
 const searchBar = document.querySelector('.search-container');
 
 // Selectie van elementen voor het filtreer en sorteer-menu
-const tweedeButton = document.querySelector('.filter-sorteer button:nth-of-type(2)');
+const tweedeButton = document.querySelector('.filter-sorteer li:nth-of-type(2) button');
 const eertseButton = document.querySelector('.filter-sorteer button:nth-of-type(1)');
 const sorteerMenu = document.querySelector('.filter-sorteer-menu');
 const filtreerMenu = document.querySelector('.sorteer-menu');

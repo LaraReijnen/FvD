@@ -320,6 +320,11 @@ nav.toonMenu {
     transform: translateX(0);
 }
 
+.merk label {
+    display: flex;
+    align-items: center;
+}
+
 .merken-scherm.toon {
     transform: translateX(-100%); /* Naar binnen schuiven */
 }
@@ -495,6 +500,14 @@ html.no-scroll, body.no-scroll {
 /*--------------------------------------------------*/
 /*SEARCH BAR*/
 /*--------------------------------------------------*/
+.visually_hidden {   
+    clip: rect(0 0 0 0);   
+    clip-path: inset(50%);   
+    height: 1px;   overflow: hidden;   
+    position: absolute;   
+    white-space: nowrap;   
+    width: 1px;
+}/*bron Thomas Norden teams bericht*/
 
 .search-container {
     padding-right: 1.5em !important;
@@ -575,12 +588,39 @@ html.no-scroll, body.no-scroll {
 /*--------------------------------------------------*/
 .filter-sorteer {
 	display: flex;
-	margin-right: 1em;
+	padding-right: 3em !important;
     padding: 0;
 	gap: 0.5em;
     position: sticky;
     top: 0;
     padding: 0px 10px 16px 0px;
+    width: 95%;
+}
+
+.sorteer-menu span:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 1em;
+    font-size: larger;
+}
+
+.filter-sorteer-menu span:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 1em;
+    font-size: larger;
+}
+
+.section-index label {
+    display: flex;
+    align-items: center;
+}
+
+.filter-sorteer span {
+    font-size: 1.3em;
+    font-family: normaal, sans-serif;
 }
 
 .filter-sorteer img {
@@ -593,7 +633,7 @@ html.no-scroll, body.no-scroll {
     border: 0.05em solid #000; 
 	border-radius: 0.7em;
 	background-color: var(--nav-achtergrond);
-	width: 50%;
+	width: 100%;
 	height: 3.5em;
 	padding: 1em;
 	font-size: 0.7em;
@@ -604,10 +644,16 @@ html.no-scroll, body.no-scroll {
 	gap:1em;
 }
 
-.filter-sorteer button:nth-of-type(2) {
-	display: flex;
-	justify-content:space-between;
+.filter-sorteer li:nth-of-type(2) button {
+    display: flex;
+    justify-content: space-between;
 }
+
+.filter-sorteer li {
+    width: 50%;
+}
+
+
 .filter-sorteer button:hover {
     border: 0.15em solid #000; 
 }
@@ -621,10 +667,11 @@ h1 {
 fieldset p, label {
     color: var(--letter-kleur); 
 }
-
 /*--------------------------------------------------*/
 /* filteren sorteren pop up menu*/
 /*--------------------------------------------------*/
+
+
 .filter-sorteer-menu, .sorteer-menu {
     position: absolute;
     margin-bottom: 0;
@@ -926,19 +973,19 @@ dialog h2 {
 }
 
 /* Rating en reviews (in een <span>) */
-.product-soort span {
+.product-soort div {
     grid-row: 5 / 6;
     display: flex;
-    align-items: center; /* Zorgt ervoor dat alle items verticaal gecentreerd zijn */
-    gap: 0.5em; /* Ruimte tussen sterren en tekst */
+    align-items: center;
+    gap: 0.5em;
     justify-self: start;
     align-self: center;
 }
 
-.product-soort span img {
-    width: auto; /* Laat de afbeelding zichzelf aanpassen */
-    height: 1em; /* Zorg voor een consistente hoogte van de sterren */
-    display: inline-block; /* Zorg dat de afbeelding inline is */
+.product-soort div img {
+    width: auto;
+    height: 1em;
+    display: inline-block
 }
 
 .dropdown {
@@ -951,10 +998,10 @@ dialog h2 {
 }
 
 .product-soort span p {
-    font-size: 1em; /* Tekstgrootte aanpassen */
+    font-size: 1em;
     color: #666;
-    margin: 0; /* Geen extra marge rond de tekst */
-    line-height: 1.5em; /* Zelfde hoogte als het sterrenafbeelding */
+    margin: 0;
+    line-height: 1.5em;
 }
 
 /* Toevoegen knop */
@@ -994,8 +1041,8 @@ fieldset {
 
 .greenBlock {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;    /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     background-color: var(--blok-pagina-trending);
     padding: 1em;
     width: 90%;
@@ -1004,8 +1051,8 @@ fieldset {
 
 .greenBlock p {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;    /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     background-color: var(--blok-pagina-trendingk);
     color: var(--letter-kleur);
     border-radius: 1em;
@@ -1079,7 +1126,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort img:n
 }
 
 /*Sterren en reviews */
-fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort span {
+fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort div {
     grid-column: 4;
     grid-row: 3;
 }
@@ -1117,7 +1164,7 @@ fieldset:has(input[value="list"]:checked) ~ .view-container .product-soort butto
 }
 
 .grijs-blok-links a:hover {
-    text-decoration: underline; /* Onderstreping bij hover makkelijkertoegankelijk*/
+    text-decoration: underline;
 }
 
 
@@ -1155,7 +1202,9 @@ img[alt="mooi van etos"] {
 footer a,
 .section-service > h2,
 .uitklap-footer a,
-.uitklap-footer summary
+.uitklap-footer summary,
+.section-index > h2,p
+
 {
     color: var(--letter-kleur);
 }

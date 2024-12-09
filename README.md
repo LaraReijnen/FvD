@@ -494,6 +494,7 @@ De plaatjes op de servicepagina bewogen niet goed mee met de rest van de layout.
   - Kleine technische details:
 Sommige kleine details, zoals dubbele voorlezingen in de screenreader of elementen die niet netjes werden voorgelezen, bleven lastig op te lossen. Het begrijpen van ARIA-attributen en hoe screenreaders hierop reageren, vraagt nog om meer oefening, maar ik heb geprobeerd om alles zo goed werkend te maken.
 
+
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
@@ -519,6 +520,14 @@ Sommige kleine details, zoals dubbele voorlezingen in de screenreader of element
   2. bron 2
   https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
   zorgt ervoor dat de scrolbar verdwijnt
-  3. ...
+  3. bron 3
+  .visually_hidden {   
+    clip: rect(0 0 0 0);   
+    clip-path: inset(50%);   
+    height: 1px;   overflow: hidden;   
+    position: absolute;   
+    white-space: nowrap;   
+    width: 1px;
+}/*bron Thomas Norden teams bericht*/
 
 </details>

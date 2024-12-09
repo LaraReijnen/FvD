@@ -22,11 +22,11 @@
 	  
 			<!-- Menu knop -->
 			<li class="menu">
-				<a href="#">
-					<button><img src="images/navigationbar.png" alt="Navigatiebalk"></button>
-					<p>Menu</p>
-				</a>
-			</li>
+				<button>
+				  <img src="images/navigationbar.png" alt="Navigatiebalk">
+				</button>
+				<p><a href="#">Menu</a></p>
+			  </li>
 	  
 			<!-- Iconen -->
 			<li class="icons">
@@ -59,11 +59,11 @@
 			<li><a href="index.html"><img src="images/trending.png" alt="">Trending</a></li>
 			<li><a href="#"><img src="images/eerder-gekocht.png" alt="">Eerder gekocht</a></li>
 			<li><h2>Account</h2></li>
-			<hr>
+			<li><hr></li>
 			<li><a href="#"><img src="images/inloggen.png" alt="">Inloggen</a></li>
-			<hr>
+			<li><hr></li>
 			<li><a href="#"><img src="images/voordeel.png" alt="">Voordeel met mijn etos</a></li>
-			<hr>
+			<li><hr></li>
 			<li><a href="service.html">Service</a></li>
 			<li><a href="#">Winkels</a></li>
 		</ul>
@@ -71,10 +71,16 @@
 	
 	<section class="merken-scherm" aria-hidden="true">
 		<div class="headerMerken">
-			<button class="terug-knop"><img src="images/right-arrow.png" alt="Terug"></button>
-			<button class="btnMerken" aria-hidden="true">
-			<img src="images/close.png" alt="Sluit knop">
-		</div>
+			<!-- Back button -->
+			<button class="terug-knop" aria-label="Ga terug">
+			  <img src="images/right-arrow.png" alt="Terug">
+			</button>
+			<!-- Close button -->
+			<button class="btnMerken" aria-label="Sluit merken">
+			  <img src="images/close.png" alt="Sluit knop">
+			</button>
+		  </div>
+
 		<h2>Merken</h2>
 		<ul>
 			<li><a href="#">Populair</a><img src="images/right-arrow.png" alt="Verder"></li>
@@ -92,6 +98,7 @@
 	</section>
 
 	<section class="search-container">
+		<h2 class="visually_hidden">Zoek balk</h2>
 		<div>
 			<input type="text" placeholder="Waar ben je naar op zoek?" >
 			<img src="images/search.icon.png" alt="Zoek">
@@ -99,7 +106,7 @@
 	</section>
 
 	<!-- begin van de section -->
-	 <section>
+	 <section class="section-index">
 		<fieldset>
 				<label>
 					<input type="checkbox" id="kerst-toggle">
@@ -136,15 +143,19 @@
 		</ul>
 
 		<ul class="filter-sorteer">
-			<button>
-				<img src="images/filter.png" alt="Filter drop down menu">
-				<h2>Filteren</h2>	
-			</button>
+			<li>
+				<button>
+					<img src="images/filter.png" alt="Filter drop down menu">
+					<span>Filteren</span>
+				</button>
+			</li>
 
-			<button>
-				<h2>Sorteer</h2>
-				<img src="images/dropdown.png" alt="Sorteer Drop down menu">
-			</button>
+			<li>
+				<button>
+					<span>Sorteer</span>
+					<img src="images/dropdown.png" alt="Sorteer Drop down menu">
+				</button>
+			</li>
 		</ul>
 
 		<dialog class="filter-sorteer-menu">
@@ -153,7 +164,7 @@
 					<button aria-hidden="true">
 						<img src="images/close.png" alt="Sluit menu">
 					</button>
-					<h2>Sorteer</h2>
+					Sorteer
 				</span>
 
 				<label>
@@ -199,7 +210,7 @@
 					<button aria-hidden="true">
 						<img src="images/close.png" alt="Sluit menu">
 					</button>
-					<h2>Filteren</h2>
+					Filteren
 				</span>
 		
 				<!-- Dropdown 1 -->
@@ -330,17 +341,17 @@
 
 				<!-- Dropdown 2 -->
 				<details>
-					<summary>Prijs</summary>
-					<div>
-					  <label for="price-range">Prijs:</label>
-					  <input type="range" id="price-range-min" name="min-price" min="0" max="100" value="0">
-					  <input type="range" id="price-range-max" name="max-price" min="0" max="100" value="100">
-					  <div>
-						<span>Min: €<span id="min-price-display">0</span></span>
-						<span>Max: €<span id="max-price-display">100</span></span>
-					  </div>
-					</div>
-				  </details>
+				    <summary>Prijs</summary>
+				    <div>
+				        <label for="price-range-min">Prijs:</label>
+				        <input type="range" id="price-range-min" name="min-price" min="0" max="100" value="0">
+				        <input type="range" id="price-range-max" name="max-price" min="0" max="100" value="100">
+				        <div>
+				            <span>Min: €<span id="min-price-display">0</span></span>
+				            <span>Max: €<span id="max-price-display">100</span></span>
+				        </div>
+				    </div>
+				</details>
 				  
 
 				<!-- Dropdown 4 -->
@@ -377,7 +388,10 @@
 				<p>100 ML - zalf</p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
 				<a href="#">La Roche-Posay Cicaplast Balsem B5+ Gevoelige Huid 100</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(108)</p></span>
+				<div class="product-rating">
+					<img src="images/sterren-product1.png" alt="aantal sterren">
+					<p>(84)</p>
+				</div>
 				<button>Voeg toe +</button>
 			</li>
 
@@ -388,7 +402,10 @@
 				<p>50 ML - crème </p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
 				<a href="#">La Roche-Posay Anthelios Onzichtbare Fluide</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(84)</p></span>
+				<div class="product-rating">
+					<img src="images/sterren-product1.png" alt="aantal sterren">
+					<p>(108)</p>
+				</div>
 				<button>Voeg toe +</button>
 			</li>
 
@@ -399,7 +416,10 @@
 				<p>30 ML - serum </p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
 				<a href="#">CeraVe Resurfacing Retinol Serum 30 ML</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(46)</p></span>
+				<div class="product-rating">
+					<img src="images/sterren-product1.png" alt="aantal sterren">
+					<p>(84)</p>
+				</div>
 				<button>Voeg toe +</button>
 			</li>
 
@@ -410,7 +430,10 @@
 				<p>236 ML - gel</p>
 				<img src="images/product1-geld.png" alt="21,50 euro">
 				<a href="#">CeraVe Anti-Onzuiverheden Reiniger - 236 ML</a>
-				<span><img src="images/sterren-product1.png" alt="aantal sterren"><p>(18)</p></span>
+				<div class="product-rating">
+					<img src="images/sterren-product1.png" alt="aantalsterren">
+					<p>(84)</p>
+				</div>
 				<button>Voeg toe +</button>
 			</li>
 		</ul>
@@ -450,34 +473,34 @@
 		<details class="uitklap-footer">
 			<summary>Over Etos</summary>
 				<ul>
-					<li><a hef="#">Het bedrijf</a></li>
-					<li><a hef="#">Werken bij</a></li>
-					<li><a hef="#">Mijn Etos</a></li>
-					<li><a hef="#">Folder</a></li>
-					<li><a hef="#">Winkels</a></li>
-					<li><a hef="#">Duurzaamheid</a></li>
-					<li><a hef="#">Pers</a></li>
+					<li><a href="#">Het bedrijf</a></li>
+					<li><a href="#">Werken bij</a></li>
+					<li><a href="#">Mijn Etos</a></li>
+					<li><a href="#">Folder</a></li>
+					<li><a href="#">Winkels</a></li>
+					<li><a href="#">Duurzaamheid</a></li>
+					<li><a href="#">Pers</a></li>
 				</ul>      
 		</details>
 		
 		<details class="uitklap-footer">
 			<summary>Service</summary>
 				<ul>
-					<li><a hef="#">Klantenservice</a></li>
-					<li><a hef="#">Actuele vragen</a></li>
-					<li><a hef="#">Bestellen en bezorgen</a></li>
-					<li><a hef="#">Betalen en retouneren</a></li>
-					<li><a hef="#">Garantie</a></li>
+					<li><a href="#">Klantenservice</a></li>
+					<li><a href="#">Actuele vragen</a></li>
+					<li><a href="#">Bestellen en bezorgen</a></li>
+					<li><a href="#">Betalen en retouneren</a></li>
+					<li><a href="#">Garantie</a></li>
 				</ul>      
 		</details>
 	
 		<details class="uitklap-footer">
 			<summary>Advies</summary>
 				<ul>
-					<li><a hef="#">Beauty</a></li>
-					<li><a hef="#">Gezondheid</a></li>
-					<li><a hef="#">Verzorging</a></li>
-					<li><a hef="#">Baby</a></li>
+					<li><a href="#">Beauty</a></li>
+					<li><a href="#">Gezondheid</a></li>
+					<li><a href="#">Verzorging</a></li>
+					<li><a href="#">Baby</a></li>
 				</ul>      
 		</details>
 	
