@@ -8,6 +8,11 @@
     src: url('../fonts/Apercu-Regular-Pro\(1\).woff2') format('woff2');
     font-family: normaal;
 }
+
+@font-face{
+    src: url('../fonts/Apercu-Medium-Pro\(1\).woff2') format('woff2');
+    font-family: mediunm;
+}
 /* styles/style.css */
 :root {
     --labels-kleur: #F8C9DD;
@@ -59,6 +64,18 @@ body {
 }
 
 
+h1{
+    font-family: hoofd, sans-serif;
+    font-size: 2.3em;
+}
+
+h2 {
+    font-family: mediunm, sans-serif;
+}
+
+p, button, summary, input,a {
+    font-family: normaal, sans-serif;
+}
 
 a {
     color: #000;
@@ -73,17 +90,20 @@ section {
 }
 
 .header-iconen {
-    padding: 10px 20px;
-
+    padding: 0.3em 1em;
 }
 
 .header-bestellen {
     display: flex;
     justify-content: center;
     background-color: var(--labels-kleur);
-    padding: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     font-size: 0.9em;
-    height: 2em;
+}
+
+.header-bestellen p {
+    margin: 0; /* Verwijder standaard marges van <p> */
 }
 
 header img {
@@ -148,12 +168,20 @@ header button {
 
 .icons {
     display: flex;
-    gap: 15px; /* Ruimte tussen de iconen */
+    gap: 1.5em; /* Ruimte tussen de iconen */
 }
 
 .icons img {
     width: 24px;
     height: 24px;
+}
+
+.icons span {
+    background-color: var(--blok-pagina-trending);
+    border-radius: 0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    color: var(--letter-kleur);
 }
 
 .whishlist span {
@@ -285,7 +313,7 @@ nav.toonMenu {
     right: -103%; /* Buiten beeld */
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--background-kleur);
     z-index: 3;
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -340,45 +368,38 @@ html.no-scroll, body.no-scroll {
 
 /* Container for "Alle Merken" button */
 .alle-merken-container {
-    position: absolute; /* Position relative to the .merken-scherm */
-    bottom: 0; /* Place it at the bottom of the container */
-    width: 100%; /* Make it span the full width */
-    background-color: pink; /* Pink background for the entire row */
-    text-align: right; /* Align button content to the right */
-    padding: 0.5em 1em; /* Add some padding for spacing */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--labels-kleur);
+    text-align: right;
+    padding: 0.5em 1em;
     padding-bottom: 2em;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
 }
 
-/* Style the "Alle Merken" button */
 .alle-merken {
-    background: none; /* Remove default button styling */
+    background: none;
     border: none;
-    color: #000; /* Text color */
+    color: #000;
     font-size: 1rem;
     cursor: pointer;
-    display: inline-flex; /* Align text and image */
+    display: inline-flex;
     align-items: center;
-    gap: 0.5em; /* Space between text and image */
+    gap: 0.5em;
 }
 
-
-
 .merken-scherm ul {
-    list-style: none; /* Remove default list styles */
+    list-style: none;
     padding-left: 1em !important;
     margin: 0;
 }
 
-.merken-scherm a {
-    text-decoration: none !important;
-}
-
 .merken-scherm ul li {
-    display: flex; /* Use flexbox */
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Space between text and image */
-    padding-bottom: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
     padding-left: 1em;
 }
 
@@ -386,19 +407,16 @@ html.no-scroll, body.no-scroll {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem; /* Adjust font size if needed */
+    font-size: 1rem;
 }
 
-
-
-
-
+.merken-scherm a {
+    text-decoration: none !important;
+}
 
 /*--------------------------------------------------*/
-/*mERK*/
+/*MERK*/
 /*--------------------------------------------------*/
-
-
 
 /* Shared styles for all schermen */
 .populair-scherm,
@@ -525,7 +543,7 @@ html.no-scroll, body.no-scroll {
 	gap: 1rem;
 	-ms-overflow-style: none;  /* IE and Edge */
     width: 100%;
-	scrollbar-width: none;  /* Firefox */
+	scrollbar-width: none;  /* Firefox bronn: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */ 
 }
 
 .scrolbar-container li {
@@ -537,7 +555,7 @@ html.no-scroll, body.no-scroll {
 	height: 4rem;
 	background-color: var(--background-kleur);
 	border: 1px solid var(--letter-kleur);
-    padding: 0;
+    padding-top: 0.3em;
 	border-radius: 0.7em;
 }
 
@@ -555,7 +573,6 @@ html.no-scroll, body.no-scroll {
 /*--------------------------------------------------*/
 /* filteren sorteren*/
 /*--------------------------------------------------*/
-
 .filter-sorteer {
 	display: flex;
 	margin-right: 1em;
@@ -623,7 +640,11 @@ fieldset p, label {
 
 .merk {
     padding-left: 0;
+}
 
+.merk li {
+    display: flex;
+    align-items: baseline;
 }
 
 .merk-div input[type="search"] {
@@ -633,14 +654,47 @@ fieldset p, label {
     width: 100%;
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+    background-color: #b9e9c2;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #b9e9c2;
+    border-color: #000;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
 input[type="range"] {
     width: 100%;
     margin: 10px 0;
-  }
+}
   
-  div span {
+div span {
     margin: 0 10px;
-  }
+}
 
 
 /* Remove default marker from <summary> */
@@ -652,11 +706,11 @@ summary {
     font-size: 1rem;
     font-weight: bold;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
 
 summary::-webkit-details-marker {
-    display: none; /* Remove the default marker */
+    display: none; 
 }
 
 /* Add custom arrow */
@@ -669,7 +723,7 @@ summary::after {
 
 /* Rotate arrow when details is open */
 details[open] summary::after {
-    transform: rotate(180deg); /* Arrow points upward */
+    transform: rotate(180deg); 
 }
 
 /* Styling for details content */
@@ -680,8 +734,8 @@ details div {
 
 /* Make labels stack in their own rows */
 details div label {
-    display: block; /* Stack labels */
-    margin-bottom: 5px; /* Add spacing between labels */
+    display: block;
+    margin-bottom: 5px;
 }
 
 details {
@@ -693,7 +747,6 @@ hr {
     border-top: 1px solid #ccc;
     margin: 10px 0;
 }
-
 
 .filter-sorteer-menu img {
     width: 1.5em;
@@ -717,26 +770,25 @@ hr {
 }
 
 .filter-sorteer-menu input[type="radio"] {
-    appearance: none; /* Verwijdert de standaard radio button styling */
-    width: 20px; /* Bepaalt de breedte van de knop */
-    height: 20px; /* Bepaalt de hoogte van de knop */
-    border: 2px solid #000; /* Zwarte rand */
-    border-radius: 50%; /* Maakt de knop rond */
-    display: inline-block; /* Zorgt voor inline positionering */
-    margin-right: 1em; /* Ruimte tussen knop en tekst */
-    outline: none; /* Verwijdert de standaard focus */
-    cursor: pointer; /* Wijst aan dat dit klikbaar is */
-    background-color: var(--background-kleur); /* Witte achtergrond */
-    transition: background-color 0.3s ease; /* Gladde overgang voor kleur */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 1em;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--background-kleur);
+    transition: background-color 0.3s ease;
 }
 
 .filter-sorteer-menu input[type="radio"]:hover {
-    background-color: #cfe9e6; /* Lichtgroene achtergrondkleur bij hover */
+    background-color: #cfe9e6;
 }
 
 .filter-sorteer-menu input[type="radio"]:checked {
-    background-color: #cfe9e6; /* Lichtgroene kleur bij selectie */
-    border-color: #000; /* Houdt de rand zwart bij selectie */
+    background-color: #cfe9e6;
+    border-color: #000;
 }
 
 .filter-sorteer-menu label {
@@ -754,7 +806,6 @@ dialog::backdrop {
 }
 html:has(dialog[open]) {
 	overflow:hidden;
-	scrollbar-gutter: stable;
 }
 
 dialog button {
@@ -770,9 +821,43 @@ dialog h2 {
     padding-left:1em;
 }
 
+.filter-twede-button {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 1em 1.25em;
+    border-radius: 0.8em;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 /*--------------------------------------------------*/
 /* Producten in grid*/
 /*--------------------------------------------------*/
+/* Standaard: volledige tekst zichtbaar */
+.product-soort a {
+    display: inline-block;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .product-soort a {
+        max-width: 200px; /* Beperk breedte van de link */
+    }
+}
+
+/* Scherm kleiner dan 480px */
+@media screen and (max-width: 320px) {
+    .product-soort a {
+        max-width: 120px; /* Nog kleinere breedte */
+    }
+}
 
 .product-soort {
     display: grid;
@@ -881,7 +966,7 @@ dialog h2 {
     text-align: center;
     background-color: var(--background-kleur);
     border: 1px solid #333;
-    border-radius: 5px;
+    border-radius: 0.7em;
     font-size: 1em;
     padding: 0.7em;
     width: 100%;
@@ -930,12 +1015,17 @@ fieldset {
 /*--------------------------------------------------*/
 .view-container {
     padding: 0;
+    margin-right: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .view-container li {
     margin: 0.5em;
+}
+
+.resul-grid-list {
+    height: 1em;
 }
 
 
@@ -1062,8 +1152,10 @@ img[alt="mooi van etos"] {
 .etos-tekst,
 .section-service > p,
 .links-footer li a,
-footer a,/*doet het niet*/
-.section-service > h2
+footer a,
+.section-service > h2,
+.uitklap-footer a,
+.uitklap-footer summary
 {
     color: var(--letter-kleur);
 }
@@ -1095,13 +1187,18 @@ footer a,/*doet het niet*/
     color: #000;
 }
 
+.helpen h2 {
+    font-size: 1.5em;
+    font-family: hoofd;
+}
+
 .helpen div {
     display: flex;
     align-items: center;
     background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    padding: 5px 15px;
+    border: 0.0625em solid #ddd;
+    border-radius: 1.5625em; 
+    padding: 0.3125em 0.9375em; 
     width: 90%;
     margin-bottom: 1em;
 }
@@ -1109,15 +1206,15 @@ footer a,/*doet het niet*/
 .helpen input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 1em;
     flex: 1;
-    padding: 5px;
+    padding: 0.3125em; /* 5px = 0.3125em */
 }
 
 .search-container img {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: 0.5em;
     opacity: 0.7;
 }
 
@@ -1199,6 +1296,10 @@ footer a,/*doet het niet*/
     list-style: disc;
 }
 
+.disc p {
+    line-height: 1.3em;
+}
+
 .section-service > a {
     font-size: large;
     font-weight: bold;
@@ -1229,10 +1330,10 @@ footer a,/*doet het niet*/
 }
 
 .onderwerpen-op-rij div {
-    width: 150px;
-    height: 150px;
+    width: 9.375em; /* 150px ÷ 16 = 9.375em */
+    height: 9.375em; /* 150px ÷ 16 = 9.375em */
     background-color: var(--labels-kleur);
-    border-radius: 10px;
+    border-radius: 0.625em; /* 10px ÷ 16 = 0.625em */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1283,9 +1384,11 @@ footer a,/*doet het niet*/
     transition: background-color 0.3s ease;
 }
 
-.zoek-etos-winkel .button-zwart:hover {
+.zoek-etos-winkel .button-zwart:hover,
+.filter-twede-button:hover {
     background-color: #575757;
 }
+
 
 .button-wit {
     background-color: transparent;
@@ -1367,7 +1470,8 @@ footer a,/*doet het niet*/
 /*footer*/
 /*--------------------------------------------------*/
 .uitklap-footer summary {
-    border-bottom: none;
+    border-top: none;
+    font-size: 1.1em;
 }
 
 .uitklap-footer summary::after {
@@ -1380,7 +1484,6 @@ footer a,/*doet het niet*/
 
 .uitklap-footer li {
     margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 .uitklap-footer a {

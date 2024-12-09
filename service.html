@@ -7,80 +7,122 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="service">
-	<header>
-		<ul class="header-bestellen">
-			<li><p>Voor 22:00 uur besteld, binnen 1-3 werkdagen in huis</p></li>
-		</ul>
-
+    <header>
+		<div class="header-bestellen">
+			<p>Voor 22:00 uur besteld, binnen 1-3 werkdagen in huis</p>
+		</div>		
+		
 		<ul class="header-iconen">
 			<!-- Logo -->
 			<li class="logo">
-			  <img src="images/etoslogo.png" alt="Etos Logo">
+				<a href="#">
+					<img src="images/etoslogo.png" alt="Etos Logo">
+				</a>
 			</li>
 	  
 			<!-- Menu knop -->
 			<li class="menu">
-			  <button><img src="images/navigationbar.png" alt="Navigatiebalk"></button>
-			  <p>Menu</p>
+				<a href="#">
+					<button><img src="images/navigationbar.png" alt="Navigatiebalk"></button>
+					<p>Menu</p>
+				</a>
 			</li>
 	  
 			<!-- Iconen -->
 			<li class="icons">
-			  <img src="images/userIcon.png" alt="User Icon">
-			  <img src="images/favoriteIcon.svg" alt="Favorite Icon">
-			  <img src="images/basketIcon.png" alt="Basket Icon">
+				<a href="#"><img src="images/userIcon.png" alt="User Icon"></a>
+				<a href="#" class="wishlist">
+					<img src="images/favoriteIcon.png" alt="Favorite Icon">
+					<span>0</span>
+				</a>
+				<a href="#"><img src="images/basketIcon.png" alt="Basket Icon"></a>
 			</li>
-		  </ul>
+		</ul>
 	</header>
-  
-	<nav class="">
+	
+	<nav>
 		<!-- De sluit button -->
 		<button aria-hidden="true">
-		  <img src="/images/close.png" alt="Sluit knop">
+			<img src="/images/close.png" alt="Sluit knop">
 		</button>
-		
-		<ul>
-		  <li><h2>Categorien</h2></li>
-		  <li><a class="active"><img src="images/folder.g.png" alt="Folder acties"> <span>Folder acties</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/merken.png" alt="Merken"> <span>Merken</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/beauty.png" alt="Beauty"> <span>Beauty</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/verzorging.png" alt="Verzorging"> <span>Verzorging</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/gezondheid.png" alt="Gezondheid"> <span>Gezondheid</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/zwanger-baby-kind.png" alt="Zwanger, Baby en Kind"> <span>Zwanger, Baby en Kind</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/thuis-en-op-rijs.png" alt="Thuis & op reis"> <span>Thuis & op reis</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="#"><img src="images/cadeaus.png" alt="Cadeaus"> <span>Cadeaus</span> <img src="images/right-arrow.png" alt="Pijl met verder gaan"></a></li>
-		  <li><a href="index.html"><img src="images/trending.png" alt="Trending"> <span>Trending</span> </a></li>
-		  <li><a href="#"><img src="images/eerder-gekocht.png" alt="Eerder gekocht"> <span>Eerder gekocht</span> </a></li>
-		  <li><h2>Account</h2></li>
-		  <hr>
-		  <li><a href="#"><img src="images/inloggen.png" alt="Inloggen"> <span>Inloggen</span> </a></li>
-		  <hr>
-		  <li><a href="#"><img src="images/voordeel.png" alt="Voordeel"> <span>Voordeel met mijn etos</span> </a></li>
-		  <hr>
-		  <li><a href="service.html"> Service </a></li>
-		  <li><a href="#"> Winkels </a></li>
+	
+		<ul class="categorienImg">
+			<li><h2>Categorien</h2></li>
+			<li><a class="active"><img src="images/folder.g.png" alt="">Folder acties<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#" class="merken-link"><img src="images/merken.png" alt="">Merken<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/beauty.png" alt="">Beauty<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/verzorging.png" alt="">Verzorging<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/gezondheid.png" alt="">Gezondheid<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/zwanger-baby-kind.png" alt="">Zwanger, Baby en Kind<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/thuis-en-op-rijs.png" alt="">Thuis & op reis<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="#"><img src="images/cadeaus.png" alt="">Cadeaus<img src="images/right-arrow.png" class="rightArrow" alt="Pijl met verder gaan"></a></li>
+			<li><a href="index.html"><img src="images/trending.png" alt="">Trending</a></li>
+			<li><a href="#"><img src="images/eerder-gekocht.png" alt="">Eerder gekocht</a></li>
+			<li><h2>Account</h2></li>
+			<hr>
+			<li><a href="#"><img src="images/inloggen.png" alt="">Inloggen</a></li>
+			<hr>
+			<li><a href="#"><img src="images/voordeel.png" alt="">Voordeel met mijn etos</a></li>
+			<hr>
+			<li><a href="service.html">Service</a></li>
+			<li><a href="#">Winkels</a></li>
 		</ul>
-	  </nav>
-
-      <section class="search-container">
-		<div>
-			<input type="text" placeholder="Waar ben je naar op zoek?" >
-			<img src="images/search.icon.png" alt="Zoek">
+	</nav>
+	
+	<section class="merken-scherm" aria-hidden="true">
+		<div class="headerMerken">
+			<button class="terug-knop"><img src="images/right-arrow.png" alt="Terug"></button>
+			<button class="btnMerken" aria-hidden="true">
+			<img src="/images/close.png" alt="Sluit knop">
 		</div>
-	  </section>
+		<h2>Merken</h2>
+		<ul>
+			<li><a href="#">Populair</a><img src="images/right-arrow.png" alt="Verder"></li>
+			<li><a href="#">Nieuw</a><img src="images/right-arrow.png" alt="Verder"></li>
+			<li><a href="#">A-G</a><img src="images/right-arrow.png" alt="Verder"></li>
+			<li><a href="#">H-P</a><img src="images/right-arrow.png" alt="Verder"></li>
+			<li><a href="#">Q-Z</a><img src="images/right-arrow.png" alt="Verder"></li>
+		</ul>
+		<div class="alle-merken-container">
+			<button class="alle-merken">
+				<span>Alle Merken</span>
+				<img src="images/pijl.png" alt="Verder">
+			</button>
+		</div>
+	</section>
+
+
+    <section class="search-container">
+	    <div>
+	    	<input type="text" placeholder="Waar ben je naar op zoek?" >
+	    	<img src="images/search.icon.png" alt="Zoek">
+	    </div>
+	</section>
       
+    <section class="section-service">
+		<fieldset>
+            <label>
+                <input type="checkbox" id="kerst-toggle">
+                Kerst thema
+            </label>
+        </fieldset>
+    
+        <div class="bgVideo hide">
+            <video autoplay muted loop id="startVideo">
+                <source src="video/video-pakketje-opening.mov" type="video/mp4"> <!--bron video: https://www.youtube.com/watch?v=YeYU67u0Gz4-->
+            </video>
+            <video autoplay muted loop id="myVideo">
+                <source src="video/video-kerst.mp4" type="video/mp4"> <!--bron video: https://www.youtube.com/watch?v=YeYU67u0Gz4-->
+            </video>
+            <audio id="kerst-audio">
+                <source src="geluid/geluid-kerst.mp3" type="audio/mp3">
+            </audio>
+        </div> 
+    
+        <div class="kerst-slinger hide">
+            <img src="images/kerst.slinger.png" alt="kerst slinger">
+        </div>
 
-
-
-      <section class="section-service">
-        <fieldset>
-			<div>
-				<label>
-					<input type="checkbox" id="kerst-toggle">
-					Kerst thema aan
-				</label>
-			</div>
-		</fieldset>
         <H1>Klantenservice</H1>
         <ul class="helpen">
             <li><h2> Hoe kunnen we je helpen?</h2></li>
@@ -92,60 +134,51 @@
             </li>
             <li><a href="#">Ga naar veelgestelde vragen</a></li>
         </ul>
-
         <ul class="links-container">
             <a href="#">
                 <li><img src="images/bestelling.png" alt="bestellingen"></li>
                 <li><h2>Bestelling(en) bekijken</h2><img src="images/pijl.png" alt="pijl om verder te gaan"></li>
             </a>
         </ul>
-
         <ul class="links-container">
             <a href="#">
                 <li><img src="images/klantkaart.png" alt="Klantkaart"></li>
                 <li><h2>Klantkaart koppelen</h2><img src="images/pijl.png" alt="pijl om verder te gaan"></li>
             </a>
         </ul>
-
         <ul class="links-container">
             <a href="#">
                 <li><img src="images/gegevens.png" alt="gegevens"></li>
                 <li><h2>gegevens weizigen</h2><img src="images/pijl.png" alt="pijl om verder te gaan"></li>
             </a>
         </ul>
-
         <ul class="links-container">
             <a href="#">
                 <li><img src="images/voorkeuren.png" alt="voorkeuren"></li>
                 <li><h2>Voorkeuren aanpassen</h2><img src="images/pijl.png" alt="pijl om verder te gaan"></li>
             </a>
         </ul>
-
         <h2>Veelgestelde vragen</h2>
-        <hr>
         <details class="disc">
             <summary>Wanneer word mijn bestelling bezorgd?</summary>
             <div>
                 <p>We bezorgen je pakketje van maandag tot en met zaterdag.</p>
                 <ul>
-                    <li>Standaard geldt van zondag tot vrijdag: Voor 22:00 uur besteld, morgen in huis.</li>
-                    <li>Heb je vrijdag na 22:00 uur besteld? Of besteld op zaterdag? Dan ontvang je jouw pakketje maandag thuis.</li>
-                    <li>Afhalen in de winkel kan de volgende werkdag vanaf 15:00 uur.</li>
-                    <li>Het kan voorkomen dat de levertijd van je pakket langer is dan onze standaard belofte. Je ziet de daadwerkelijk verwachte levertijd altijd terug in je winkelmand en bij de bezorgopties tijdens het afrekenen.</li>
+                    <li><p>Standaard geldt van zondag tot vrijdag: Voor 22:00 uur besteld, morgen in huis.</p></li>
+                    <li><p>Heb je vrijdag na 22:00 uur besteld? Of besteld op zaterdag? Dan ontvang je jouw pakketje maandag thuis.</p></li>
+                    <li><p>Afhalen in de winkel kan de volgende werkdag vanaf 15:00 uur.</p></li>
+                    <li><p>Het kan voorkomen dat de levertijd van je pakket langer is dan onze standaard belofte. Je ziet de daadwerkelijk verwachte levertijd altijd terug in je winkelmand en bij de bezorgopties tijdens het afrekenen.</p></li>
                 </ul>
                 <p>Zodra je bestelling verzonden is, ontvang je per e-mail een verzendbevestiging met de Track & Trace link van PostNL. Hierin vind je de meest actuele informatie over de levering van je bestelling. Het is mogelijk dat je bestelling over verschillende pakketten is verdeeld. Voor elk pakketje ontvang je een aparte Track & Trace code en de levertijden van de pakketten kunnen verschillen.</p>
-                <p>
-                    Let op: was je niet thuis op het moment van bezorging? PostNL laat géén briefje meer achter als een pakketbezorger voor een dichte deur heeft gestaan. Je ontvangt een e-mail met de status van je bestelling of je kan deze informatie bekijken in de PostNL app.</p>
+                <p>Let op: was je niet thuis op het moment van bezorging? PostNL laat géén briefje meer achter als een pakketbezorger voor een dichte deur heeft gestaan. Je ontvangt een e-mail met de status van je bestelling of je kan deze informatie bekijken in de PostNL app.</p>
             </div>
         </details>
-
         <details class="disc">
             <summary>Kan ik mijn bestelling laten bezorgen in België?</summary>
             <div>
                 <p>Helaas, een online bestelling kan uitsluitend bezorgd worden in Nederland. Wel kan je een pakketje ophalen in Nederland wanneer je een Nederlandse postcode gebruikt als factuuradres. Betalen kan met een IBAN rekening via iDeal, een mastercard, Visa creditcard, een Etos cadeaukaart of VVV cadeaukaart.</p>
             </div>
         </details>
-
         <details class="disc">
             <summary>Mijn bestelling is niet compleet geleverd, wanneer ontvang ik de rest?</summary>
             <div>
@@ -153,9 +186,7 @@
                 <p>Controleer ook je (spam) mailbox voor eventuele updates.</p>
             </div>
         </details>
-
         <a href="#">Naar alle veelgestelde vragen</a>
-
         <h2>Alle onderwerpen op een rij</h2>
         <ul class="onderwerpen-op-rij">
             <li>
@@ -207,14 +238,12 @@
                 </a>
             </li>
         </ul>
-
         <ul class="zoek-etos-winkel">
             <li><img src="images/zoek-etos-winkel.avif" alt="zoek een etos winkel"></li>
             <li><h2>Zoek een Etos winkel in de buurt </h2></li>
             <li><p>Er is altijd een Etos winkel in de buurt. Heb je vragen kom langs en wij helpen je verder. </p></li>
             <li><button class="button-zwart">Zoek een Etos winkel</button></li>
         </ul>
-
         <ul class="zoek-etos-winkel">
             <li><img src="images/meer-shopgemak.avif" alt="nog meer shopgemak"></li>
             <li><h2>Nóg meer shopgemak met de Mijn Etos app </h2></li>
@@ -222,32 +251,29 @@
             <li><button class="button-wit">download in google play</button></li>
             <li><button class="button-zwart">download in de app store</button></li>
         </ul>
-
         <p class="contact-klantenservice">Niet gevonden wat je zocht? Neem <a href="#">contact</a> op met onze klantenservice.</p>
-
         <ul class="grijs-blok-links">
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>520 winkels </b>altijd in de buurt</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Populairste website </b>van het jaar 2023</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Gratis </b>bezorging vanaf 35$</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Gratis </b>retouneren</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#"><b>Nog meer voordeel </b>met Mijn Etos</a>
-			</li>
-		</ul>
-
+            <li>
+                <img src="images/vink.png" alt="vinkje">
+                <a href="#"><b>520 winkels </b>altijd in de buurt</a>
+            </li>
+            <li>
+                <img src="images/vink.png" alt="vinkje">
+                <a href="#"><b>Populairste website </b>van het jaar 2023</a>
+            </li>
+            <li>
+                <img src="images/vink.png" alt="vinkje">
+                <a href="#"><b>Gratis </b>bezorging vanaf 35$</a>
+            </li>
+            <li>
+                <img src="images/vink.png" alt="vinkje">
+                <a href="#"><b>Gratis </b>retouneren</a>
+            </li>
+            <li>
+                <img src="images/vink.png" alt="vinkje">
+                <a href="#"><b>Nog meer voordeel </b>met Mijn Etos</a>
+            </li>
+        </ul>
         <img src="images/mooi-van-etos.png" alt="mooi van etos">
         <p class="etos-tekst">Etos is al meer dan honderd jaar jouw vertrouwde drogist. In de winkel én online. Met ruim 520 filialen door heel Nederland is er altijd een Etos drogist bij jou in de buurt.</p>
         
@@ -263,7 +289,6 @@
                     <li><a hef="#">Pers</a></li>
                 </ul>      
         </details>
-
         <details class="uitklap-footer">
             <summary>Service</summary>
                 <ul>
@@ -274,7 +299,6 @@
                     <li><a hef="#">Garantie</a></li>
                 </ul>      
         </details>
-
         <details class="uitklap-footer">
             <summary>Advies</summary>
                 <ul>
@@ -284,23 +308,20 @@
                     <li><a hef="#">Baby</a></li>
                 </ul>      
         </details>
-
         <h2>Mijn Etos</h2>
         <p>Geniet het hele jaar door van nóg meer voordeel. </p>
         <ul class="links-footer">
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#">Krijg 10% korting op héél véél Etos Merk-producten</a>
-			</li>
-			<li>
-				<img src="images/vink.png" alt="vinkje">
-				<a href="#">De fijnste kassakorting met Mijn Miles</a>
-			</li>
-		</ul>
+	    	<li>
+	    		<img src="images/vink.png" alt="vinkje">
+	    		<a href="#">Krijg 10% korting op héél véél Etos Merk-producten</a>
+	    	</li>
+	    	<li>
+	    		<img src="images/vink.png" alt="vinkje">
+	    		<a href="#">De fijnste kassakorting met Mijn Miles</a>
+	    	</li>
+	    </ul>
         <button class="inloggen">Inloggen</button>
-      </section>
-
-	<script src="scripts/script.js"></script>   
+    </section>  
 
     <footer>
         <img src="images/betaal-iconen.png" alt="betaal iconen">
@@ -315,5 +336,6 @@
             <li><a href="#">Kwetsbaarheid melden</a></li>
         </ul>
     </footer> 
+    <script src="scripts/script.js"></script> 
 </body>
 </html>

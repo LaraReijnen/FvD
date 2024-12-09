@@ -517,6 +517,8 @@ Sommige kleine details, zoals dubbele voorlezingen in de screenreader of element
   de screanshot van de code die ik van chat gpt kreeg:
   <img src="readme-images/screanshot-chatgpt2.png" width="375px" alt="chatGPT code">
   2. bron 2
+  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+  zorgt ervoor dat de scrolbar verdwijnt
   3. ...
 
 </details>

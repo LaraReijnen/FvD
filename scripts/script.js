@@ -30,21 +30,22 @@ document.getElementById('kerst-toggle').addEventListener('change', function () {
 
   // Play the start video
   startVideo.play();
-  startVideo.style.zIndex = '100'; // Ensure it's on top
-  startVideo.style.display = 'block'; // Ensure it is visible
+  startVideo.style.zIndex = '100';
+  startVideo.style.display = 'block';
 
   // Play the background video, but keep it hidden initially
-  bgVideo.style.display = 'none'; // Hide initially
+  bgVideo.style.display = 'none';
 
   // After 3 seconds, hide the start video and reveal the background video
   setTimeout(() => {
-      startVideo.pause(); // Stop the start video
-      startVideo.style.display = 'none'; // Hide the start video
-      bgVideo.play(); // Preload the background video
-      bgVideo.style.display = 'block'; // Show the background video
-      bgVideo.style.zIndex = '-1'; // Ensure it's in the background
-  }, 3000); // Wait 3 seconds before switching
+      startVideo.pause();
+      startVideo.style.display = 'none';
+      bgVideo.play();
+      bgVideo.style.display = 'block';
+      bgVideo.style.zIndex = '-1';
+  }, 3000);
 });
+
 
 
 document.getElementById('kerst-toggle').addEventListener('change', function () {
@@ -79,6 +80,8 @@ document.getElementById('kerst-toggle').addEventListener('change', function () {
       audio.currentTime = 0;
     }
   });
+
+
   
 // Navigation Menu
 menuButton.addEventListener('click', () => {
