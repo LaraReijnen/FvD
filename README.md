@@ -494,6 +494,7 @@ De plaatjes op de servicepagina bewogen niet goed mee met de rest van de layout.
   - Kleine technische details:
 Sommige kleine details, zoals dubbele voorlezingen in de screenreader of elementen die niet netjes werden voorgelezen, bleven lastig op te lossen. Het begrijpen van ARIA-attributen en hoe screenreaders hierop reageren, vraagt nog om meer oefening, maar ik heb geprobeerd om alles zo goed werkend te maken.
 
+- wat ik nog wilde toevoeen als ik meer tijd had was de header en nav die aan de bovenkant zou blijben plakken en terug komen.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>

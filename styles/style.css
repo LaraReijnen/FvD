@@ -117,6 +117,8 @@ header img {
 header {
     background-color: var(--nav-achtergrond);
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
 }
 
 header a {
@@ -592,7 +594,7 @@ html.no-scroll, body.no-scroll {
     padding: 0;
 	gap: 0.5em;
     position: sticky;
-    top: 0;
+    top: 6em;
     padding: 0px 10px 16px 0px;
     width: 95%;
 }
@@ -711,6 +713,7 @@ input[type="checkbox"] {
     margin-right: 10px;
     position: relative;
     transition: all 0.3s ease;
+    z-index: -1;
 }
 
 input[type="checkbox"]:hover {
@@ -895,14 +898,14 @@ dialog h2 {
 
 @media screen and (max-width: 768px) {
     .product-soort a {
-        max-width: 200px; /* Beperk breedte van de link */
+        max-width: 200px;
     }
 }
 
 /* Scherm kleiner dan 480px */
 @media screen and (max-width: 320px) {
     .product-soort a {
-        max-width: 120px; /* Nog kleinere breedte */
+        max-width: 120px;
     }
 }
 
@@ -1538,6 +1541,11 @@ footer a,
 .uitklap-footer a {
     font-size: 0.8em;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.uitklap-footer a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -1644,7 +1652,7 @@ html.kerst {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 100; /* Start video on top */
+    z-index: 1000; /* Start video on top */
     display: block; /* Ensure it is visible initially */
 }
 
