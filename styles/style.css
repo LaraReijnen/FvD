@@ -542,6 +542,7 @@ html.no-scroll, body.no-scroll {
     height: 20px;
     margin-left: 8px;
     opacity: 0.7;
+    z-index: -1;
 }
 
 /*------------------------*/
